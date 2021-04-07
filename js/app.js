@@ -6,6 +6,13 @@ fetch(config.soundsList)
     .then(response => response.json())
     .then(json => data.sounds = json);
 
+// Calculate correct volume
+function calcVolume(volume) {
+    if (volume === undefined) { volume = 1 };
+    if (!(0 <= volume) || !(volume >= 1) ) { console.error(`Volume value must be in range [0,1]`); volume = 1 };
+    return config.volume * volume
+}
+
 // Creating the buttons
 function createButtons() {
     const sounds = data.sounds;
@@ -26,6 +33,7 @@ function play(evt) {
     const soundName = evt.target.getAttribute('data-sound');
     const sound = data.sounds.find( ({ name }) => name == soundName);
     const interface = new Audio(`assets/sounds/${sound.path}`);
+    interface.volume = calcVolume(sound.volume);
     interface.play();
     console.log(`Played ${sound.name}`)
 }
