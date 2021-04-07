@@ -24,15 +24,26 @@ body {
 
 h1.header {
     font-family: 'black';
-    font-size: 64px;
+    font-size: 5vw;
     color: white;
 }
 
 p.header {
     font-family: 'black';
-    font-size: 32px;
+    font-size: 2vw;
     color: white;
     letter-spacing: 2px;
+}
+
+div#buttons {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    text-align: center;
 }
 
 button.sound-button {
@@ -44,10 +55,12 @@ button.sound-button {
     border: hidden;
     border-radius: 8px;
     outline: none;
+    margin: 8px;
     transition: 0.5s;
 }
 
 button.sound-button:hover {
+    transform: scale(1.2);
     background-color: var(--button-hover);
 }
 
