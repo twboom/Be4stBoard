@@ -9,7 +9,6 @@ fetch(config.soundsList)
 // Calculate correct volume
 function calcVolume(volume) {
     if (volume === undefined) { volume = 1 };
-    if (!(0 <= volume) || !(volume >= 1) ) { console.error(`Volume value must be in range [0,1]`); volume = 1 };
     return config.volume * volume
 }
 
