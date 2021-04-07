@@ -6,5 +6,33 @@
     {
         "name": "McDonalds Zombie",
         "path": "mcdzombie.mp3"
+    },
+    {
+        "name": "Fuck",
+        "path": "fuck.mp3"
+    },
+    {
+        "name": "FIIIIGGGHTTT",
+        "path": "fight.mp3"
+    },
+    {
+        "name": "HOOOOW",
+        "path": "how.mp3"
+    },
+    {
+        "name": "Nice",
+        "path": "nice.mp3"
+    },
+    {
+        "name": "Noooo Waaayy!",
+        "path": "noway.mp3"
+    },
+    {
+        "name": "I'm leaving",
+        "path": "imleaving.mp3"
+    },
+    {
+        "name": "It's USELESS",
+        "path": "itsuseless.mp3"
     }
 ]
