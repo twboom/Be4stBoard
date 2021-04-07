@@ -75,6 +75,25 @@ p.footer {
     margin: 0;
 }
 
+div#controls {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+div.controller {
+    background-color: var(--button-color);
+    padding: 16px;
+    width: min-content;
+    border: hidden;
+    border-radius: 8px;
+    font-family: 'medium';
+    font-size: 24px;
+}
+
 div#buttons {
     width: 80%;
     margin: auto;

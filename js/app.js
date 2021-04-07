@@ -37,3 +37,7 @@ function play(evt) {
     interface.play();
     console.log(`Played ${sound.name}`)
 }
+
+function updateConfig(target, value) {
+    config[target] = parseFloat(value);
+}
