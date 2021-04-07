@@ -14,7 +14,9 @@ function createButtons() {
         const sound = sounds[i];
         const btn = document.createElement('button');
         btn.setAttribute('data-sound', sound.name);
+        btn.setAttribute('class', 'sound-button')
         btn.addEventListener('click', play);
+        btn.innerHTML = sound.name;
         container.appendChild(btn);
         console.log(`Created button ${sound.name}`);
     };
