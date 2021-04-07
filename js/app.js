@@ -27,4 +27,5 @@ function play(evt) {
     const sound = data.sounds.find( ({ name }) => name == soundName);
     const interface = new Audio(`assets/sounds/${sound.path}`);
     interface.play();
+    console.log(`Played ${sound.name}`)
 }
