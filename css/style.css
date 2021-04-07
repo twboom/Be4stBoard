@@ -171,7 +171,10 @@ button.sound-button:active {
 
     footer {
         padding: 1%;
+        padding-top: 16px;
+        padding-bottom: 16px;
         width: 98%;
         left: 0;
+        display: table-column;
     }
 }
