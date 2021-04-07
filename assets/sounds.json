@@ -1,6 +1,10 @@
 [
     {
-        "name": "stupid",
-        "path": null
+        "name": "OMG",
+        "path": "omg.mp3"
+    },
+    {
+        "name": "McDonalds Zombie",
+        "path": "mcdzombie.mp3"
     }
 ]
