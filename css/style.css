@@ -1,3 +1,57 @@
+@font-face {
+    font-family: 'black';
+    src:
+        local('Burbank Big Condensed Black'),
+        url('../assets/black.otf')
+}
+
+@font-face {
+    font-family: 'medium';
+    src:
+        local('Burbank Big Condensed Medium'),
+        url('../assets/medium.otf')
+}
+
 :root {
     --main-color: #7B0504;
+    --button-color: #4d97bf;
+    --button-hover: #1851a7;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+h1.header {
+    font-family: 'black';
+    font-size: 64px;
+    color: white;
+}
+
+p.header {
+    font-family: 'black';
+    font-size: 32px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+button.sound-button {
+    background-color: var(--button-color);
+    color: white;
+    font-family: 'medium';
+    font-size: 24px;
+    padding: 16px;
+    border: hidden;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.5s;
+}
+
+button.sound-button:hover {
+    background-color: var(--button-hover);
+}
+
+button.sound-button:active {
+    background-color: white;
+    color: var(--button-hover)
 }
