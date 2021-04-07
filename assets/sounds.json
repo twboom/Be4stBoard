@@ -1,7 +1,8 @@
 [
     {
         "name": "OMG",
-        "path": "omg.mp3"
+        "path": "omg.mp3",
+        "volume": 0.5
     },
     {
         "name": "McDonalds Zombie",
@@ -13,11 +14,13 @@
     },
     {
         "name": "FIIIIGGGHTTT",
-        "path": "fight.mp3"
+        "path": "fight.mp3",
+        "volume": 0.5
     },
     {
         "name": "HOOOOW",
-        "path": "how.mp3"
+        "path": "how.mp3",
+        "volume": 0.7
     },
     {
         "name": "Nice",
@@ -25,7 +28,8 @@
     },
     {
         "name": "Noooo Waaayy!",
-        "path": "noway.mp3"
+        "path": "noway.mp3",
+        "volume": 0.5
     },
     {
         "name": "I'm leaving",
