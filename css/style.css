@@ -175,6 +175,10 @@ button.sound-button:active {
         font-size: 24px;
     }
 
+    div#buttons {
+        margin-bottom: 128px;
+    }
+
     article.info {
         width: 100%;
     }

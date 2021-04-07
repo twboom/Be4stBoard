@@ -21,13 +21,13 @@ function init() {
         // Removing eventlisteners for init
         document.removeEventListener('mousemove', init);
         document.removeEventListener('click', init);
-        clearTimeout(initTimout)
+        clearInterval(initInterval)
         console.log(`Completed initiation`)
     }
     else {
         console.warn(`Initiation failed`)
     }
 }
-const initTimout = setTimeout(init, 500)
+const initInterval = setInterval(init, 50)
 document.addEventListener('mousemove', init)
 document.addEventListener('click', init)
