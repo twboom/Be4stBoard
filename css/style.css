@@ -41,6 +41,28 @@ p.header {
     letter-spacing: 2px;
 }
 
+footer {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    position: fixed;
+    bottom: 16px;
+    left: 10%;
+    border: hidden;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+p.footer {
+    text-align: center;
+    font-family: 'medium';
+    font-size: 1.5vw;
+    margin: 0;
+}
+
 div#buttons {
     width: 80%;
     margin: auto;
@@ -83,6 +105,10 @@ button.sound-button:active {
 
     p.header {
         font-size: 30px;
+    }
+
+    p.footer {
+        font-size: 24px;
     }
 
     button.sound-button {
