@@ -22,6 +22,7 @@
 
 body {
     background-color: var(--main-color);
+    margin: 0;
 }
 
 header {
@@ -32,6 +33,17 @@ h1.header {
     font-family: 'black';
     font-size: 5vw;
     color: white;
+    appearance: none;
+}
+
+a.header {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.header:hover {
+    color: var(--button-color);
 }
 
 p.header {
@@ -59,7 +71,7 @@ footer {
 p.footer {
     text-align: center;
     font-family: 'medium';
-    font-size: 1.5vw;
+    font-size: 24px;
     margin: 0;
 }
 
@@ -71,8 +83,36 @@ div#buttons {
     justify-content: center;
 }
 
-main {
-    text-align: center;
+div#info {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    padding: 16px;
+    border: hidden;
+    border-radius: 16px;
+}
+
+h1.info {
+    font-family: 'black';
+}
+
+p.info {
+    font-family: 'medium';
+    font-size: 24px;
+}
+
+ul.info {
+    text-align: left;
+}
+
+li.info {
+    font-family: 'medium';
+    font-size: 24px;
+}
+
+article.info {
+    width: 50%;
+    margin: auto;
 }
 
 button.sound-button {
@@ -99,6 +139,10 @@ button.sound-button:active {
 }
 
 @media only screen and (max-width: 1000px) {
+    header {
+        text-align: center;
+    }
+    
     h1.header {
         font-size: 60px;
     }
@@ -107,11 +151,16 @@ button.sound-button:active {
         font-size: 30px;
     }
 
-    p.footer {
+    button.sound-button {
         font-size: 24px;
     }
 
-    button.sound-button {
-        font-size: 24px;
+    article.info {
+        width: 100%;
+    }
+    
+    div#info {
+        width: max-content;
+        margin: auto;
     }
 }
