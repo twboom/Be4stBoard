@@ -99,6 +99,7 @@ h1.info {
 p.info {
     font-family: 'medium';
     font-size: 24px;
+    word-wrap: break-word;
 }
 
 ul.info {
@@ -158,9 +159,19 @@ button.sound-button:active {
     article.info {
         width: 100%;
     }
+
+    p.info {
+        overflow-wrap: normal;
+    }
     
     div#info {
-        width: max-content;
-        margin: auto;
+        padding: 1%;
+        width: 98%;
+    }
+
+    footer {
+        padding: 1%;
+        width: 98%;
+        left: 0;
     }
 }
