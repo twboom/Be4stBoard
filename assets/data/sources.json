@@ -1,0 +1,12 @@
+[
+    {
+        "link": "https://www.twitch.tv/be4stsie/clip/ThankfulSavoryBarracudaImGlitch-flcOl0SRUh_m2cWU",
+        "available": true,
+        "sounds": ["fight", "how", "noway", "imleaving", "itsuseless", "nice"]
+    },
+    {
+        "link": "https://www.twitch.tv/be4stsie/clip/HonestColorfulHerdHeyGuys",
+        "available": false,
+        "sounds": ["omg", "mcdzombie", "fuck"]
+    }
+]
