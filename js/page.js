@@ -59,10 +59,10 @@ function build() {
                 element.setAttribute(category.attributes[y].type, category.attributes[i].value)
             };
 
-            
+            // Setting link to file
             element.setAttribute('href', name)
 
-            console.log(element)
+            // Appending element to all the correct locations
             document.querySelectorAll(category.location).forEach(item => {
                 item.appendChild(element)
             })
