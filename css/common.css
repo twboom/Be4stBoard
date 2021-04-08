@@ -72,6 +72,15 @@ p {
     word-wrap: break-word;
 }
 
+a {
+    color: var(--button-color);
+    transition: 0.5s;
+}
+
+a:hover {
+    color: var(--button-hover);
+}
+
 ul {
     text-align: left;
 }
