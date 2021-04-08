@@ -6,7 +6,7 @@
     },
     {
         "link": "https://www.twitch.tv/be4stsie/clip/HonestColorfulHerdHeyGuys",
-        "available": false,
+        "available": true,
         "sounds": ["omg", "mcdzombie", "fuck"]
     }
 ]
