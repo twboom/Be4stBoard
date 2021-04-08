@@ -1,4 +1,4 @@
 const config = {
-    'soundsList': 'assets/sounds.json',
+    'soundsList': 'assets/data/sounds.json',
     'volume': 1
 };

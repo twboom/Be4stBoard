@@ -1,82 +1,3 @@
-@font-face {
-    font-family: 'black';
-    src:
-        local('Burbank Big Condensed Black'),
-        url('../assets/black.otf')
-}
-
-@font-face {
-    font-family: 'medium';
-    src:
-        local('Burbank Big Condensed Medium'),
-        url('../assets/medium.otf')
-}
-
-
-
-:root {
-    --main-color: #7B0504;
-    --button-color: #4d97bf;
-    --button-hover: #1851a7;
-}
-
-body {
-    background-color: var(--main-color);
-    margin: 0;
-}
-
-header {
-    text-align: center;
-}
-
-h1.header {
-    font-family: 'black';
-    font-size: 5vw;
-    color: white;
-    appearance: none;
-    margin-bottom: 0;
-}
-
-a.header {
-    color: white;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-a.header:hover {
-    color: var(--button-color);
-}
-
-p.header {
-    font-family: 'black';
-    font-size: 2vw;
-    color: white;
-    letter-spacing: 2px;
-    margin-top: 0;
-}
-
-footer {
-    width: 80%;
-    margin: auto;
-    background-color: white;
-    position: fixed;
-    bottom: 16px;
-    left: 10%;
-    border: hidden;
-    border-radius: 16px;
-    padding: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-p.footer {
-    text-align: center;
-    font-family: 'medium';
-    font-size: 24px;
-    margin: 0;
-}
-
 div#controls {
     width: 50%;
     margin: auto;
@@ -204,18 +125,6 @@ input[type=range]::-moz-range-thumb:hover {
 }
 
 @media only screen and (max-width: 1200px) {
-    header {
-        text-align: center;
-    }
-    
-    h1.header {
-        font-size: 60px;
-    }
-
-    p.header {
-        font-size: 30px;
-    }
-
     button.sound-button {
         font-size: 24px;
     }
@@ -235,15 +144,6 @@ input[type=range]::-moz-range-thumb:hover {
     div#info {
         padding: 1%;
         width: 98%;
-    }
-
-    footer {
-        padding: 1%;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        width: 98%;
-        left: 0;
-        display: table-column;
     }
 
     input[type=range] {
