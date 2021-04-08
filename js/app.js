@@ -31,7 +31,8 @@ function createButtons() {
 function play(evt) {
     const soundName = evt.target.getAttribute('data-sound');
     const sound = data.sounds.find( ({ name }) => name == soundName);
-    const interface = new Audio(`assets/sounds/${sound.path}`);
+    const path = `${config.soundLocation}/${sound.slug}.${sound.extension}`
+    const interface = new Audio(path);
     interface.volume = calcVolume(sound.volume);
     interface.play();
     console.log(`Played ${sound.name}`)
