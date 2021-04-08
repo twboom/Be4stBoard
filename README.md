@@ -1,7 +1,10 @@
 # Be4stBoard
 The original Be4stSie Soundboard!
 
-Please note: this is meant as a joke! I, Thijs Boom, do not own *any* of these sounds!
+## About
+This is a small soundboard webapp with sounds from Be4stSie!
+
+Please note: I'm not a developer, it is *not* my job. That's why my code can be very sloppy!
 
 ## Be4stSie
 Be4stSie is a good friend of mine, he makes YouTube videos and streams on Twitch.
@@ -17,6 +20,8 @@ If you want to request a sound to be added, please open up an issue in the ['Iss
 
 ## License
 This project is licenced under the MIT License (see [here][license]). The voices are *not* licensed and belong to Be4stSie!
+
+This basically means that you are allowed to use this software, build on it and distribute it. However, when distributing it, you must publish the part of your application that orginates from this project under the same (MIT) license! Again, the voices are licensed seperatly!
 
 ## Questions
 If you have more questions, please leave them in the ['Discussions'][discussions] tab here on GitHub or send me a message on Discord.
