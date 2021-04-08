@@ -1,42 +1,51 @@
 [
     {
         "name": "OMG",
-        "path": "omg.mp3",
+        "slug": "omg",
+        "extension": "mp3",
         "volume": 0.5
     },
     {
         "name": "McDonalds Zombie",
-        "path": "mcdzombie.mp3"
+        "slug": "mcdzombie",
+        "extension": "mp3"
     },
     {
         "name": "Fuck",
-        "path": "fuck.mp3"
+        "slug": "fuck",
+        "extension": "mp3"
     },
     {
         "name": "FIIIIGGGHTTT",
-        "path": "fight.mp3",
+        "slug": "fight",
+        "extension": "mp3",
         "volume": 0.5
     },
     {
         "name": "HOOOOW",
-        "path": "how.mp3",
+        "slug": "how",
+        "extension": "mp3",
         "volume": 0.7
     },
     {
         "name": "Nice",
-        "path": "nice.mp3"
+        "slug": "nice",
+        "extension": "mp3"
     },
     {
         "name": "Noooo Waaayy!",
-        "path": "noway.mp3",
+        "slug": "noway",
+        "extension": "mp3",
         "volume": 0.5
     },
     {
         "name": "I'm leaving",
-        "path": "imleaving.mp3"
+        "slug": "imleaving",
+        "extension": "mp3"
     },
     {
         "name": "It's USELESS",
-        "path": "itsuseless.mp3"
+        "slug": "itsuseless",
+        "extension": "mp3"
     }
 ]
