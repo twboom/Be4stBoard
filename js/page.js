@@ -12,7 +12,7 @@ page = {
                     'value': 'stylesheet'
                 }
             ],
-            'files': ['common', 'responsive']
+            'files': ['common', 'responsive', 'fonts']
         },
         {
             'extension': 'ico',

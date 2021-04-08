@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'black';
+    src:
+        local('Burbank Big Condensed Black'),
+        url('../assets/fonts/black.otf')
+}
+
+@font-face {
+    font-family: 'medium';
+    src:
+        local('Burbank Big Condensed Medium'),
+        url('../assets/fonts/medium.otf')
+}
