@@ -34,6 +34,7 @@ h1.header {
     font-size: 5vw;
     color: white;
     appearance: none;
+    margin-bottom: 0;
 }
 
 a.header {
@@ -51,6 +52,7 @@ p.header {
     font-size: 2vw;
     color: white;
     letter-spacing: 2px;
+    margin-top: 0;
 }
 
 footer {
