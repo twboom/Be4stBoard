@@ -1,3 +1,10 @@
+const config = {
+    'soundsList': 'assets/data/sounds.json',
+    'soundLocation': 'assets/sounds',
+    'titleSuffix': ' | Be4stBoard',
+    'volume': 1
+};
+
 page = {
     'assets': ['header', 'footer'],
     'links': [
@@ -6,6 +13,7 @@ page = {
             'directory': 'css/',
             'location': 'head',
             'tag': 'link',
+            'linkType': 'href',
             'attributes': [
                 {
                     'type': 'rel',
@@ -19,6 +27,7 @@ page = {
             'directory': '',
             'location': 'head',
             'tag': 'link',
+            'linkType': 'href',
             'attributes': [
                 {
                     'type': 'rel',
@@ -56,11 +65,11 @@ function build() {
 
             // Setting correct attributes
             for (let y = 0; y < category.attributes.length; y++) {
-                element.setAttribute(category.attributes[y].type, category.attributes[i].value)
+                element.setAttribute(category.attributes[y].type, category.attributes[y].value)
             };
 
             // Setting link to file
-            element.setAttribute('href', name)
+            element.setAttribute(category.linkType, name)
 
             // Appending element to all the correct locations
             document.querySelectorAll(category.location).forEach(item => {
@@ -68,6 +77,9 @@ function build() {
             })
         };
     };
+
+    // Adding the correct title suffix
+    document.querySelector('title').innerHTML += config.titleSuffix;
 };
 
 build()

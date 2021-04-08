@@ -2,7 +2,7 @@ let data = {};
 data.ready = false;
 
 // Fetching all the sounds
-fetch(config.soundsList)
+fetch('assets/data/sounds.json')
     .then(response => response.json())
     .then(json => data.sounds = json);
 
