@@ -72,5 +72,15 @@
         "name": "WHOEHAAAAA",
         "slug": "whoeha",
         "extension": "mp3"
+    },
+    {
+        "name": "I'm pressing a lot of buttons",
+        "slug": "impressingbuttons",
+        "extension": "mp3"
+    },
+    {
+        "name": "FUUUUCCCCKKKKK",
+        "slug": "fuck2",
+        "extension": "mp3"
     }
 ]

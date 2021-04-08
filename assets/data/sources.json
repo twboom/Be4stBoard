@@ -8,5 +8,20 @@
         "link": "https://www.twitch.tv/be4stsie/clip/HonestColorfulHerdHeyGuys",
         "available": true,
         "sounds": ["omg", "mcdzombie", "fuck"]
+    },
+    {
+        "link": "https://www.twitch.tv/be4stsie/clip/DistinctRelatedTroutHotPokket--HlIfjVhEp29Xp9q",
+        "available": true,
+        "sounds": ["wee", "noice", "holdup", "dammit", "whoeha"]
+    },
+    {
+        "link": "https://www.twitch.tv/be4stsie/clip/PlainAgileOryxResidentSleeper-gnRT_ZwWS797sNMp",
+        "available": true,
+        "sounds": ["impressingbuttons"]
+    },
+    {
+        "link": "https://www.twitch.tv/be4stsie/clip/CheerfulHeadstrongMarjoramDoubleRainbow-Hu8xU2FreSHEZQfn",
+        "available": true,
+        "sounds": ["fuck2"]
     }
 ]
