@@ -47,5 +47,30 @@
         "name": "It's USELESS",
         "slug": "itsuseless",
         "extension": "mp3"
+    },
+    {
+        "name": "Whee",
+        "slug": "wee",
+        "extension": "mp3"
+    },
+    {
+        "name": "Noice",
+        "slug": "noice",
+        "extension": "mp3"
+    },
+    {
+        "name": "Hol up",
+        "slug": "holdup",
+        "extension": "mp3"
+    },
+    {
+        "name": "Dammit",
+        "slug": "dammit",
+        "extension": "mp3"
+    },
+    {
+        "name": "WHOEHAAAAA",
+        "slug": "whoeha",
+        "extension": "mp3"
     }
 ]
