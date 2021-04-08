@@ -12,10 +12,22 @@ Here are his socials:
 
 He also has a Discord server! Check it out [here][Discord]!
 
+## Contributing
+If you want to request a sound to be added, please open up an issue in the ['Issues'][issues] tab, or send me a message on Discord!
+
+## License
+This project is licenced under the MIT License (see [here][license]). The voices are *not* licensed and belong to Be4stSie!
+
+## Questions
+If you have more questions, please leave them in the ['Discussions'][discussions] tab here on GitHub or send me a message on Discord.
+
+## Contact
+You can contact me on Discord, Thijs#3291.
+
 [YouTube]: https://www.youtube.com/channel/UCGkXvKfK6WwV4xMvsc5qIEw
 [Twitch]: https://www.twitch.tv/be4stsie
 [Twitter]: https://twitter.com/be4stsie
 [Discord]: https://discord.com/invite/aq5r2UP
-
-## Development
-This webapp is developed by Thijs Boom (twboom)
+[license]: https://github.com/twboom/Be4stBoard/blob/main/LICENSE
+[discussions]: https://github.com/twboom/Be4stBoard/discussions
+[issues]: https://github.com/twboom/Be4stBoard/issues
