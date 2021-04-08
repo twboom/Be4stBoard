@@ -25,39 +25,6 @@ div#buttons {
     justify-content: center;
 }
 
-div#info {
-    background-color: white;
-    width: 70%;
-    margin: auto;
-    padding: 16px;
-    border: hidden;
-    border-radius: 16px;
-}
-
-h1.info {
-    font-family: 'black';
-}
-
-p.info {
-    font-family: 'medium';
-    font-size: 24px;
-    word-wrap: break-word;
-}
-
-ul.info {
-    text-align: left;
-}
-
-li.info {
-    font-family: 'medium';
-    font-size: 24px;
-}
-
-article.info {
-    width: 50%;
-    margin: auto;
-}
-
 button.sound-button {
     background-color: var(--button-color);
     color: white;
@@ -131,19 +98,6 @@ input[type=range]::-moz-range-thumb:hover {
 
     div#buttons {
         margin-bottom: 128px;
-    }
-
-    article.info {
-        width: 100%;
-    }
-
-    p.info {
-        overflow-wrap: normal;
-    }
-    
-    div#info {
-        padding: 1%;
-        width: 98%;
     }
 
     input[type=range] {

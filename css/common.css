@@ -77,25 +77,36 @@ p.footer {
     margin: 0;
 }
 
-@media only screen and (max-width: 1200px) {
-    header {
-        text-align: center;
-    }
-    
-    h1.header {
-        font-size: 60px;
-    }
+h1 {
+    font-family: 'black';
+    font-size: 32px;
+}
 
-    p.header {
-        font-size: 30px;
-    }
+p {
+    font-family: 'medium';
+    font-size: 24px;
+    word-wrap: break-word;
+}
 
-    footer {
-        padding: 1%;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        width: 98%;
-        left: 0;
-        display: table-column;
-    }
+ul {
+    text-align: left;
+}
+
+li {
+    font-family: 'medium';
+    font-size: 24px;
+}
+
+article {
+    width: 50%;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    padding: 16px;
+    border: hidden;
+    border-radius: 16px;
 }

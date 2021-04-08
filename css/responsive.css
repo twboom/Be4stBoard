@@ -1,0 +1,35 @@
+@media only screen and (max-width: 1200px) {
+    header {
+        text-align: center;
+    }
+    
+    h1.header {
+        font-size: 60px;
+    }
+
+    p.header {
+        font-size: 30px;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    p {
+        overflow-wrap: normal;
+    }
+    
+    section {
+        padding: 1%;
+        width: 98%;
+    }
+
+    footer {
+        padding: 1%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 98%;
+        left: 0;
+        display: table-column;
+    }
+}
