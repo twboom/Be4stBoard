@@ -30,6 +30,10 @@
         margin-top: 0;
     }
 
+    main {
+        margin-bottom: 15vh;
+    }
+
     article {
         width: 100%;
     }

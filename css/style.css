@@ -54,7 +54,7 @@ input[type=range] {
     -moz-appearance: none;
     outline: none;
 
-    width: 10vw;
+    width: 20vw;
     height: 8px;
     border: hidden;
     border-radius: 16px;

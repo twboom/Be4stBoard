@@ -90,6 +90,11 @@ h1.nav {
     font-size: 64px;
 }
 
+a.nav {
+    color: black;
+    text-decoration: none;
+}
+
 ul.nav {
     width: 50%;
     margin: auto;
