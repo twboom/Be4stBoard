@@ -4,11 +4,15 @@ data.ready = false;
 // Fetching all the sources
 fetch('assets/data/sources.json')
     .then(response => response.json())
+    .then(json => data.sources = json)
+
+fetch('assets/data/sounds.json')
+    .then(response => response.json())
     .then(json => data.sounds = json)
 
 function createSections() {
-    for (let i = 0; i < data.sounds.length; i++) {
-        const source = data.sounds[i]
+    for (let i = 0; i < data.sources.length; i++) {
+        const source = data.sources[i]
 
         // Creating section
         const section = document.createElement('section')
@@ -32,8 +36,9 @@ function createSections() {
         // Adding the list items to the list
         for (x = 0; x < source.sounds.length; x++) {
             const li = document.createElement('li');
-            li.innerHTML = source.sounds[x]
-            list.appendChild(li)
+            const sound = data.sounds.find( ({ slug }) => slug === source.sounds[x])
+            li.innerHTML = sound.name;
+            list.appendChild(li);
         }
         section.appendChild(list)
         
@@ -44,12 +49,12 @@ function createSections() {
 
 function init() {
     console.log(`INIT:  Starting initiation`)
-    if (!data.ready && data.sounds !== undefined) {
+    if (!data.ready && data.sources !== undefined && data.sounds !== undefined) {
+        data.ready = true;
 
         // Creating sections
         createSections();
-        data.ready = true;
-
+        
         // Misc initaion stuff
 
         // Removing eventlisteners for init
