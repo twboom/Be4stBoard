@@ -41,7 +41,8 @@ page = {
             ],
             'files': ['favicon']
         }
-    ]
+    ],
+    'menu': []
 }
 
 function build() {
@@ -82,6 +83,7 @@ function build() {
     // Setting eventlisteners
     setTimeout(_ => {
         document.getElementById('menu-open').addEventListener('click', menu)
+        document.getElementById('menu-close').addEventListener('click', menu)
     }, 100)
 
     // Adding the correct title suffix
@@ -92,7 +94,6 @@ function menu() {
     if (config.menu) { // Show the menu
         document.body.style.overflowY = 'hidden';
         document.getElementsByTagName('nav')[0].style.display = 'block';
-        console.log('ok');
         config.menu = false;
     }
     else if (!config.menu) { // Hide the menu
