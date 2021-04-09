@@ -36,11 +36,7 @@ a.header {
     text-decoration: none;
     font-size: 6vw;
     transition: 0.5s;
-
     cursor: pointer;
-
-    margin-left: 3vw;
-
     -webkit-user-drag: none;
 	-khtml-user-drag: none;
 	-moz-user-drag: none;
