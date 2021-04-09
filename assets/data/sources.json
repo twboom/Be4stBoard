@@ -40,5 +40,11 @@
         "link": "https://www.twitch.tv/be4stsie/clip/ChillyFaithfulDogeAMPEnergyCherry-hqHO426nogfmj-Qy",
         "available": true,
         "sounds": ["toktik"]
+    },
+    {
+        "name": "Knäckebröd",
+        "link": "https://www.twitch.tv/be4stsie/clip/EnticingProductiveKoupreyKappa-CMrubjB6lVXWVeDP",
+        "available": true,
+        "sounds": ["knackebrod"]
     }
 ]
