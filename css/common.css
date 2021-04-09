@@ -4,6 +4,10 @@
     --button-hover: #1851a7;
 }
 
+main {
+    margin-bottom: 9vh;
+}
+
 body {
     background-color: var(--main-color);
     margin: 0;
@@ -112,5 +116,5 @@ section {
     padding: 16px;
     border: hidden;
     border-radius: 16px;
-    margin-bottom: 10vh;
+    margin-bottom: 1vh;
 }
