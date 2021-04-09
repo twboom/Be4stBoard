@@ -55,6 +55,13 @@ function createSections() {
     }
 };
 
+function setStats() {
+    const soundCount = document.getElementById('sound-count');
+    const sourceCount = document.getElementById('source-count');
+    soundCount.innerHTML = data.sounds.length;
+    sourceCount.innerHTML = data.sources.length;
+}
+
 function init() {
     console.log(`INIT:  Starting initiation`)
     if (!data.ready && data.sources !== undefined && data.sounds !== undefined) {
@@ -62,6 +69,9 @@ function init() {
 
         // Creating sections
         createSections();
+
+        // Setting stats
+        setStats();
         
         // Misc initaion stuff
 
