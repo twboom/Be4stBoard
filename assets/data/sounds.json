@@ -117,5 +117,15 @@
         "name": "Fuck Fuck Fuck Fuck",
         "slug": "fuckfuckfuckfuck",
         "extension": "mp3"
+    },
+    {
+        "name": "What What WHAAT?!",
+        "slug": "what",
+        "extension": "mp3"
+    },
+    {
+        "name": "That's BULLSHIT",
+        "slug": "bullshit",
+        "extension": "mp3"
     }
 ]
