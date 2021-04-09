@@ -21,16 +21,22 @@ header {
 
 h1.header {
     font-family: 'black';
-    font-size: 5vw;
+    font-size: 8vw;
     color: white;
     appearance: none;
-    margin-bottom: 0;
+    margin-bottom: 2vh;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 a.header {
     color: white;
     text-decoration: none;
     transition: 0.5s;
+
+    margin-left: 3vw;
 
     -webkit-user-drag: none;
 	-khtml-user-drag: none;
@@ -47,12 +53,49 @@ a.header:active {
     color: var(--button-hover);
 }
 
+img.header {
+    cursor: pointer;
+    padding: 16px;
+    border: hidden;
+    border-radius: 16px;
+    transition: 0.5s;
+}
+
+img.header:hover {
+    background-color: white;
+}
+
 p.header {
     font-family: 'black';
     font-size: 2vw;
     color: white;
     letter-spacing: 2px;
     margin-top: 0;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: #31313131;
+}
+
+div#nav {
+    width: 50%;
+    height: 80%;
+    margin: 10% auto;
+    background-color: white;
+    border: hidden;
+    border-radius: 16px;
+}
+
+h1.nav {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 64px;
 }
 
 footer {

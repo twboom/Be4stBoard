@@ -2,11 +2,12 @@ const config = {
     'soundsList': 'assets/data/sounds.json',
     'soundLocation': 'assets/sounds',
     'titleSuffix': ' | Be4stBoard',
+    'menu': true,
     'volume': 1
 };
 
 page = {
-    'assets': ['header', 'footer'],
+    'assets': ['header', 'footer', 'nav'],
     'links': [
         {
             'extension': 'css',
@@ -78,8 +79,27 @@ function build() {
         };
     };
 
+    // Setting eventlisteners
+    setTimeout(_ => {
+        document.getElementById('menu-open').addEventListener('click', menu)
+    }, 100)
+
     // Adding the correct title suffix
     document.querySelector('title').innerHTML += config.titleSuffix;
 };
+
+function menu() {
+    if (config.menu) { // Show the menu
+        document.body.style.overflowY = 'hidden';
+        document.getElementsByTagName('nav')[0].style.display = 'block';
+        console.log('ok');
+        config.menu = false;
+    }
+    else if (!config.menu) { // Hide the menu
+        document.body.style.overflowY = 'visible';
+        document.getElementsByTagName('nav')[0].style.display = 'none';
+        config.menu = true;
+    }
+}
 
 build()
