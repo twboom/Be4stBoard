@@ -56,7 +56,8 @@
     {
         "name": "Noice",
         "slug": "noice",
-        "extension": "mp3"
+        "extension": "mp3",
+        "volume": 2
     },
     {
         "name": "Hol up",
@@ -66,21 +67,25 @@
     {
         "name": "Dammit",
         "slug": "dammit",
-        "extension": "mp3"
+        "extension": "mp3",
+        "volume": 1.5
     },
     {
         "name": "WHOEHAAAAA",
         "slug": "whoeha",
-        "extension": "mp3"
+        "extension": "mp3",
+        "volume": 0.5
     },
     {
         "name": "I'm pressing a lot of buttons",
         "slug": "impressingbuttons",
-        "extension": "mp3"
+        "extension": "mp3",
+        "volume": 1.5
     },
     {
         "name": "FUUUUCCCCKKKKK",
         "slug": "fuck2",
-        "extension": "mp3"
+        "extension": "mp3",
+        "volume": 0.5
     }
 ]
