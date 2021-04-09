@@ -92,12 +92,12 @@ function build() {
 
 function menu() {
     if (config.menu) { // Show the menu
-        document.body.style.overflowY = 'hidden';
+        document.body.style.overflow = 'hidden';
         document.getElementsByTagName('nav')[0].style.display = 'block';
         config.menu = false;
     }
     else if (!config.menu) { // Hide the menu
-        document.body.style.overflowY = 'visible';
+        document.body.style.overflow = 'visible';
         document.getElementsByTagName('nav')[0].style.display = 'none';
         config.menu = true;
     }

@@ -21,7 +21,7 @@ header {
 
 h1.header {
     font-family: 'black';
-    font-size: 8vw;
+    
     color: white;
     appearance: none;
     margin-bottom: 2vh;
@@ -34,7 +34,10 @@ h1.header {
 a.header {
     color: white;
     text-decoration: none;
+    font-size: 6vw;
     transition: 0.5s;
+
+    cursor: pointer;
 
     margin-left: 3vw;
 
@@ -51,19 +54,6 @@ a.header:hover {
 
 a.header:active {
     color: var(--button-hover);
-}
-
-img#menu-open {
-    cursor: pointer;
-    padding: 16px;
-    border: hidden;
-    border-radius: 16px;
-    transition: 0.5s;
-}
-
-img#menu-open:hover {
-    background-color: white;
-    transform: scaleX(-1);
 }
 
 p.header {
