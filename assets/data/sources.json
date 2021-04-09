@@ -43,14 +43,23 @@
     },
     {
         "name": "Knäckebröd",
+        "clipper": "thijswboom",
         "link": "https://www.twitch.tv/be4stsie/clip/EnticingProductiveKoupreyKappa-CMrubjB6lVXWVeDP",
         "available": true,
         "sounds": ["knackebrod"]
     },
     {
         "name": "no NO NOOOOOO",
+        "clipper": "thijswboom",
         "link": "https://www.twitch.tv/be4stsie/clip/WonderfulHomelySkunkAMPEnergyCherry-fyJGnT_Iz1G93_Rb",
         "available": true,
-        "sounds": ["nonono"]
+        "sounds": ["nonono", "fuckno"]
+    },
+    {
+        "name": "Highlight material",
+        "clipper": "rajparaszt69",
+        "link": "https://www.twitch.tv/be4stsie/clip/TrustworthyImpossibleYamBigBrother-cXzJSyFkw9s5fo83",
+        "available": true,
+        "sounds": ["wtf"]
     }
 ]

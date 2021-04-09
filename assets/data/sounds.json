@@ -102,5 +102,15 @@
         "name": "no NO NOOOOOO",
         "slug": "nonono",
         "extension": "mp3"
+    },
+    {
+        "name": "Fuck NO",
+        "slug": "fuckno",
+        "extension": "mp3"
+    },
+    {
+        "name": "What The Fuck",
+        "slug": "wtf",
+        "extension": "mp3"
     }
 ]
