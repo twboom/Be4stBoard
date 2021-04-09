@@ -53,7 +53,7 @@ a.header:active {
     color: var(--button-hover);
 }
 
-img.header {
+img#menu-open {
     cursor: pointer;
     padding: 16px;
     border: hidden;
@@ -61,7 +61,7 @@ img.header {
     transition: 0.5s;
 }
 
-img.header:hover {
+img#menu-open:hover {
     background-color: white;
     transform: scaleX(-1);
 }
