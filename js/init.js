@@ -1,5 +1,5 @@
 function init() {
-    console.log(`Starting initiation`)
+    console.log(`INIT:  Starting initiation`)
     if (!data.ready && data.sounds !== undefined) {
 
         // Creating buttons
@@ -23,10 +23,10 @@ function init() {
         document.removeEventListener('mousemove', init);
         document.removeEventListener('click', init);
         clearInterval(initInterval)
-        console.log(`Completed initiation`)
+        console.log(`INIT:  Completed initiation`)
     }
     else {
-        console.warn(`Initiation failed`)
+        console.warn(`INIT:  Initiation failed (This is not an error)`)
     }
 }
 const initInterval = setInterval(init, 50)

@@ -27,7 +27,7 @@ function createButtons() {
         btn.addEventListener('click', play);
         btn.innerHTML = sound.name;
         container.appendChild(btn);
-        console.log(`Created button ${sound.name}`);
+        console.log(`BOARD:  Created button ${sound.name}`);
     };
 };
 
@@ -38,7 +38,7 @@ function play(evt) {
     const interface = new Audio(path);
     interface.volume = calcVolume(sound.volume);
     interface.play();
-    console.log(`Played ${sound.name}`)
+    console.log(`USER:  Played ${sound.name}`)
 }
 
 function updateConfig(target, value) {
