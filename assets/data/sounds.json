@@ -152,5 +152,20 @@
         "name": "Best song ever",
         "slug": "badpiggiessong",
         "extension": "mp3"
+    },
+    {
+        "name": "I'm so good",
+        "slug": "imsogood",
+        "extension": "mp3"
+    },
+    {
+        "name": "No",
+        "slug": "noo",
+        "extension": "mp3"
+    },
+    {
+        "name": "Shut Up",
+        "slug": "shutup",
+        "extension": "mp3"
     }
 ]

@@ -61,13 +61,47 @@
         "link": "https://www.twitch.tv/be4stsie/clip/TrustworthyImpossibleYamBigBrother-cXzJSyFkw9s5fo83",
         "available": true,
         "sounds": ["wtf"]
-    }
-    ,
+    },
     {
         "name": "Be4stScared",
         "clipper": "thijswboom",
         "link": "https://www.twitch.tv/be4stsie/clip/VibrantInnocentSnoodPicoMause-s2dAUPxjk74dtOsN",
         "available": true,
         "sounds": ["fuckfuckfuckfuck"]
+    },
+    {
+        "name": "what WHAATTT",
+        "clipper": "thijswboom",
+        "link": "https://www.twitch.tv/be4stsie/clip/SpikyCrispyLarkLitty-DVZ3AIHAzH51WmE1",
+        "available": true,
+        "sounds": ["what", "bullshit"]
+    },
+    {
+        "name": "Did he do something stupid?",
+        "clipper": "thijswboom",
+        "link": "https://www.twitch.tv/be4stsie/clip/TameHandsomeSpiderCoolStoryBro-X1rQow9duo6V8ADX",
+        "available": true,
+        "sounds": ["somethingstupid"]
+    },
+    {
+        "name": "Be4st says wiener and wurst",
+        "clipper": "thijswboom",
+        "link": "https://www.twitch.tv/be4stsie/clip/WrongSpinelessLettuceDBstyle-cHONxCTwwKoj1EmA",
+        "available": true,
+        "sounds": ["wiener", "wurst", "douche"]
+    },
+    {
+        "name": "Be4st sings the incredible bad piggies melody",
+        "clipper": "thijswboom",
+        "link": "https://www.twitch.tv/be4stsie/clip/RoughTolerantStarlingHassanChop-E2xgH1iqnHYa8G9e",
+        "available": true,
+        "sounds": ["badpiggiessong"]
+    },
+    {
+        "name": "Bad Piggies",
+        "clipper": "rajparaszt69",
+        "link": "https://www.twitch.tv/be4stsie/clip/WildRockyDuckPogChamp-lV3nj9OxO0MGTmyN",
+        "available": true,
+        "sounds": ["imsogood", "noo", "shutup"]
     }
 ]
