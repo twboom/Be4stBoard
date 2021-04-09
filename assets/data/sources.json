@@ -33,5 +33,12 @@
         "link": "https://www.twitch.tv/be4stsie/clip/CheerfulHeadstrongMarjoramDoubleRainbow-Hu8xU2FreSHEZQfn",
         "available": true,
         "sounds": ["fuck2"]
+    },
+    {
+        "name": "tOktIk",
+        "clipper": "thijswboom",
+        "link": "https://www.twitch.tv/be4stsie/clip/ChillyFaithfulDogeAMPEnergyCherry-hqHO426nogfmj-Qy",
+        "available": true,
+        "sounds": ["toktik"]
     }
 ]
