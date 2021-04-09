@@ -23,13 +23,21 @@ function createSections() {
         section.appendChild(title)
 
         // Linking to the soure
-        const linkContainer = document.createElement('p');
-        linkContainer.innerHTML = `Find it `;
-        const link = document.createElement('a');
-        link.setAttribute('href', source.link);
-        link.innerText = `here`;
-        linkContainer.appendChild(link);
-        section.appendChild(linkContainer);
+        if (source.available) { // Source is available
+            const linkContainer = document.createElement('p');
+            linkContainer.innerHTML = `Find it `;
+            const link = document.createElement('a');
+            link.setAttribute('href', source.link);
+            link.innerText = `here`;
+            linkContainer.appendChild(link);
+            section.appendChild(linkContainer);
+        }
+        
+        else {
+            const text = document.createElement('p');
+            text.innerHTML = `This source is unavailable!`
+            section.appendChild(text)
+        }
 
         // Adding the sound list
         const list = document.createElement('ul');
