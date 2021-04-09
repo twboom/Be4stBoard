@@ -97,5 +97,10 @@
         "name": "Knäckebröd",
         "slug": "knackebrod",
         "extension": "mp3"
+    },
+    {
+        "name": "no NO NOOOOOO",
+        "slug": "nonono",
+        "extension": "mp3"
     }
 ]
