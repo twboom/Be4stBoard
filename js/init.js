@@ -22,6 +22,9 @@ function init() {
         document.querySelector('h1.header').addEventListener('mouseover', _ => {
             data.volumeTimout = setTimeout(_ => {
                 document.getElementById('volume').setAttribute('max', 1.1);
+                document.getElementById('volume').value = 1.1;
+                updateConfig('volume', 1.1);
+                setDisplay(document.getElementById('volume-display'), 11, true)
                 console.log(`USER:  Set volume to 11`)
             }, 1000)
         })
