@@ -44,3 +44,8 @@ function play(evt) {
 function updateConfig(target, value) {
     config[target] = parseFloat(value);
 }
+
+function setDisplay(element, value, round) {
+    if (round) { value = Math.round(value * 10 ) / 10 };
+    element.innerHTML = value
+}

@@ -10,13 +10,13 @@ function init() {
         document.getElementById('volume').addEventListener('input', evt => {
             const slider = evt.target;
             const display = document.getElementById('volume-display');
-            display.innerHTML = slider.value * 10;
+            setDisplay(display, slider.value * 10, true)
             updateConfig('volume', slider.value)
         })
 
         // Misc initaion stuff
 
-        document.getElementById('volume-display').innerHTML = document.getElementById('volume').value * 10;
+        setDisplay(document.getElementById('volume-display'), document.getElementById('volume').value * 10, true);
         updateConfig('volume', document.getElementById('volume').value)
 
         document.querySelector('h1.header').addEventListener('mouseover', _ => {
