@@ -8,6 +8,7 @@ fetch('assets/data/sounds.json')
 
 // Calculate correct volume
 function calcVolume(volume) {
+    if (config.volume === 1.1) { return 1 };
     if (volume === undefined) { volume = 1 };
     let output = config.volume * volume;
     if (output < 0) { output = 0 };
