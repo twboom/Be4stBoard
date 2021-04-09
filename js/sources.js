@@ -22,6 +22,11 @@ function createSections() {
         title.innerHTML = source.name
         section.appendChild(title)
 
+        // Showing the clipper
+        const clipper = document.createElement('p');
+        clipper.innerHTML = `Clipped by: ${source.clipper}`;
+        section.appendChild(clipper)
+
         // Linking to the soure
         if (source.available) { // Source is available
             const linkContainer = document.createElement('p');
@@ -55,11 +60,22 @@ function createSections() {
     }
 };
 
+function getCountDisplay(value) {
+    return document.getElementById(`${value}-count`)
+}
+
+function getUniqueClippers() {
+    const clippers = new Set();
+    for (item in data.sources) {
+        clippers.add(data.sources[item].clipper)
+    }
+    return clippers.size
+}
+
 function setStats() {
-    const soundCount = document.getElementById('sound-count');
-    const sourceCount = document.getElementById('source-count');
-    soundCount.innerHTML = data.sounds.length;
-    sourceCount.innerHTML = data.sources.length;
+    getCountDisplay('sound').innerHTML = data.sounds.length;
+    getCountDisplay('source').innerHTML = data.sources.length;
+    getCountDisplay('clipper').innerHTML = getUniqueClippers()
 }
 
 function init() {
