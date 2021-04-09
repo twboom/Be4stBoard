@@ -74,6 +74,7 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 50%;
     background-color: var(--button-hover);
     cursor: w-resize;
+    opacity: 1;
 }
 
 input[type=range]::-moz-range-thumb {
@@ -84,6 +85,7 @@ input[type=range]::-moz-range-thumb {
     background-color: var(--button-hover);
     outline: none;
     cursor: w-resize;
+    opacity: 1;
 }
 
 input[type=range]::-webkit-slider-thumb:hover,

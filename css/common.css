@@ -25,10 +25,20 @@ a.header {
     color: white;
     text-decoration: none;
     transition: 0.5s;
+
+    -webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
 }
 
 a.header:hover {
     color: var(--button-color);
+
+}
+
+a.header:active {
+    color: var(--button-hover);
 }
 
 p.header {
