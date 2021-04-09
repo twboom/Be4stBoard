@@ -62,4 +62,12 @@
         "available": true,
         "sounds": ["wtf"]
     }
+    ,
+    {
+        "name": "Be4stScared",
+        "clipper": "thijswboom",
+        "link": "https://www.twitch.tv/be4stsie/clip/VibrantInnocentSnoodPicoMause-s2dAUPxjk74dtOsN",
+        "available": true,
+        "sounds": ["fuckfuckfuckfuck"]
+    }
 ]

@@ -112,5 +112,10 @@
         "name": "What The Fuck",
         "slug": "wtf",
         "extension": "mp3"
+    },
+    {
+        "name": "Fuck Fuck Fuck Fuck",
+        "slug": "fuckfuckfuckfuck",
+        "extension": "mp3"
     }
 ]
