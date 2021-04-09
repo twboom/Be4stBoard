@@ -127,5 +127,25 @@
         "name": "That's BULLSHIT",
         "slug": "bullshit",
         "extension": "mp3"
+    },
+    {
+        "name": "Did I do somthing stupid?",
+        "slug": "somethingstupid",
+        "extension": "mp3"
+    },
+    {
+        "name": "Wiener",
+        "slug": "wiener",
+        "extension": "mp3"
+    },
+    {
+        "name": "Wurrrst",
+        "slug": "wurst",
+        "extension": "mp3"
+    },
+    {
+        "name": "douche",
+        "slug": "douche",
+        "extension": "mp3"
     }
 ]
