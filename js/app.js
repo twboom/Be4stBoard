@@ -9,7 +9,10 @@ fetch('assets/data/sounds.json')
 // Calculate correct volume
 function calcVolume(volume) {
     if (volume === undefined) { volume = 1 };
-    return config.volume * volume
+    let output = config.volume * volume;
+    if (output < 0) { output = 0 };
+    if (output > 1) { output = 1 };
+    return output;
 }
 
 // Creating the buttons

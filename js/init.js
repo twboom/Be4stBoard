@@ -16,7 +16,8 @@ function init() {
 
         // Misc initaion stuff
 
-        document.getElementById('volume-display').innerHTML = document.getElementById('volume').value
+        document.getElementById('volume-display').innerHTML = document.getElementById('volume').value;
+        updateConfig('volume', document.getElementById('volume').value)
 
         // Removing eventlisteners for init
         document.removeEventListener('mousemove', init);
