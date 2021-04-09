@@ -20,7 +20,7 @@ page = {
                     'value': 'stylesheet'
                 }
             ],
-            'files': ['common', 'responsive', 'fonts']
+            'files': ['common', 'responsive', 'fonts', 'scrollbar']
         },
         {
             'extension': 'ico',
