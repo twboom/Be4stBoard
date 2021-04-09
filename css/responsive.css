@@ -20,6 +20,7 @@
     }
     
     section {
+        border-radius: 0;
         padding: 1%;
         width: 98%;
     }
@@ -31,5 +32,6 @@
         width: 98%;
         left: 0;
         display: table-column;
+        border-radius: 0;
     }
 }
