@@ -167,5 +167,15 @@
         "name": "Shut Up",
         "slug": "shutup",
         "extension": "mp3"
+    },
+    {
+        "name": "*noise*",
+        "slug": "loudnoise",
+        "extension": "mp3"
+    },
+    {
+        "name": "WHAT?!",
+        "slug": "what2",
+        "extension": "mp3"
     }
 ]

@@ -102,6 +102,13 @@
         "clipper": "rajparaszt69",
         "link": "https://www.twitch.tv/be4stsie/clip/WildRockyDuckPogChamp-lV3nj9OxO0MGTmyN",
         "available": true,
-        "sounds": ["imsogood", "noo", "shutup"]
+        "sounds": ["imsogood", "noo", "shutup", "loudnoise"]
+    },
+    {
+        "name": "Be4st didn't district the beast",
+        "clipper": "thijswboom",
+        "link": "https://www.twitch.tv/be4stsie/clip/HappyCrypticRhinocerosYouDontSay-Og-XL5UCGVuo7Pup",
+        "available": true,
+        "sounds": ["what2"]
     }
 ]
