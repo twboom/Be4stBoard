@@ -26,7 +26,7 @@ page.elements.push({ // Menu
             <ul class="nav">
                 <li><a href="index.html">Board</a> - The soundboard</li>
                 <li><a href="sources.html">Sources</a> - Find the sources of the sounds and some statistics!</li>
-                <li><a href="info.html">Info</a> - Info page</li>
+                <li><a href="about.html">About</a> - About this app and more information</li>
             </ul>
         <button class="nav" id="menu-close">Close</button>
     </div>
