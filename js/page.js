@@ -6,7 +6,9 @@ page.config = { // Config
     "menu": false
 }
 
-page.build = function() {
+page.build = async function() {
+    const startTime = Date.now()
+
     // Add elements to the page
     for (let i = 0; i< page.elements.length; i++) {
         const obj = page.elements[i];
@@ -33,6 +35,9 @@ page.build = function() {
     link.setAttribute('rel', 'shortcut icon');
     link.setAttribute('href', 'favicon.ico')
     document.head.appendChild(link)
+
+    const loadTime = Date.now() - startTime
+    console.log(`(${utility.getTime()}) PAGE:  Finished page loading in ${loadTime} ms`)
 }
 
 page.menu = function() {

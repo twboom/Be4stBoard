@@ -79,7 +79,24 @@ const Board = class {
     }
 }
 
-function initiate(sounds) {
-    session.board = new Board(sounds)
-    session.board.create('#sound-button-container')
+// Code for controllers
+
+const setVolume = async function(evt, init) {
+    let slider = document.getElementById('volume')
+    if (!init) { slider = evt.target; }
+    const display = document.getElementById('volume-display');
+    session.volume = parseFloat(slider.value);
+    display.innerText = (Math.round(slider.value * 10 ) / 10) * 10;
+}
+
+// Initiate board
+
+async function initiate(sounds) {
+    const startTime = Date.now()
+    session.board = new Board(sounds);
+    session.board.create('#sound-button-container');
+    document.getElementById('volume').addEventListener('input', setVolume);
+    setVolume(undefined, true)
+    const loadTime = Date.now() - startTime;
+    console.log(`(${utility.getTime()}) BOARD:  Created board in ${loadTime} ms`)
 }
