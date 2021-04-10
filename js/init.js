@@ -37,6 +37,7 @@ function init() {
         document.removeEventListener('click', init);
         clearInterval(initInterval)
         console.log(`INIT:  Completed initiation`)
+        return
     }
     else {
         console.warn(`INIT:  Initiation failed (This is not an error)`)
