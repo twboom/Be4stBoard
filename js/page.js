@@ -85,7 +85,16 @@ function build() {
 
     // Setting eventlisteners
     const listenerInterval = setInterval(_ => {
-        if (page.toDo === 0) { addListeners; clearInterval(listenerInterval)}
+        if (page.toDo === 0) {
+            addListeners; clearInterval(listenerInterval);
+
+            let thisPage = document.URL.split('/');
+            thisPage = thisPage[thisPage.length - 1]
+
+            if(thisPage === '' || thisPage.includes('index')) {
+                volumeHeaderInit()
+            }
+        }
     }, 100)
 
     // Adding the correct title suffix
