@@ -47,3 +47,16 @@ page.menu = function() {
         page.config.menu = false;
     }
 }
+
+/* General utility code */
+utility =[];
+
+// Get now time, but nicely formatted
+utility.getTime = function() {
+    const now = new Date()
+    const hours = now.getHours()
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const ms = now.getMilliseconds();
+    return `${hours}:${minutes}:${seconds}, ${ms}ms`
+}

@@ -1,0 +1,68 @@
+/* Controllers */
+
+div#controls {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+div.controller {
+    background-color: var(--accent-light);
+    padding: 16px;
+    width: min-content;
+    border: hidden;
+    border-radius: 8px;
+    font-family: 'medium';
+    font-size: 24px;
+}
+
+/* Buttons */
+div#sound-button-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button.sound-button {
+    background-color: var(--accent-light);
+    color: white;
+    font-family: 'medium';
+    font-size: 1.5vw;
+    padding: 16px;
+    border: hidden;
+    border-radius: 8px;
+    outline: none;
+    margin: 8px;
+    transition: 0.5s;
+}
+
+button.sound-button:hover {
+    transform: scale(1.2);
+    background-color: var(--accent-dark);
+}
+
+button.sound-button:active {
+    background-color: white;
+    color: var(--accent-dark)
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1200px) {
+    button.sound-button {
+        font-size: 24px;
+    }
+
+    div#buttons {
+        margin-bottom: 128px;
+    }
+
+    input[type=range] {
+        width: 80vw;
+    }
+}

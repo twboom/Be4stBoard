@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Board</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/board.css">
     <script src="js/page.js"></script>
     <script src="assets/html.js"></script>
+    <script src="js/board.js"></script>
 </head>
 <body>
 
@@ -16,7 +18,16 @@
 
     <nav></nav> <!-- Will be filled by the page builder-->
 
-    <main></main>
+    <main>
+        <div id="controls">
+            <div class="controller">
+                <label for="volume">Volume: <span id="volume-display"></span></label>
+                <input type="range" name="volume" id="volume" min="0" max="1" step="0.01">
+            </div>
+        </div>
+
+        <div id="sound-button-container"></div>
+    </main>
 
     <footer></footer> <!-- Will be filled by the page builder-->
 
