@@ -39,7 +39,7 @@ function play(evt) {
     const interface = new Audio(path);
     interface.volume = calcVolume(sound.volume);
     interface.play();
-    console.log(`USER:  Played ${sound.name}`)
+    console.log(`USER:  Played ${sound.name} at volume ${config.volume * 10}`)
 }
 
 function updateConfig(target, value) {
