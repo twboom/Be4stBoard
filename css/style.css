@@ -32,6 +32,55 @@ body {
     background-color: var(--main-color);
 }
 
+h1 {
+    font-family: 'black';
+    font-size: 32px;
+}
+
+h2 {
+    font-family: 'medium';
+    font-size: 32px;
+}
+
+p {
+    font-family: 'medium';
+    font-size: 24px;
+    word-wrap: break-word;
+}
+
+a {
+    color: var(--accent-light);
+}
+
+a:hover {
+    color: var(--accent-dark);
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    font-family: 'medium';
+    font-size: 24px;
+}
+
+article {
+    width: 50%;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    padding: 16px;
+    border: hidden;
+    border-radius: 16px;
+    margin-bottom: 1vh;
+    filter: var(--shadow)
+}
+
 /* Header */
 
 header {
@@ -51,7 +100,6 @@ a.header {
     color: white;
     text-decoration: none;
     font-size: 6vw;
-    transition: 0.5s;
     cursor: pointer;
     -webkit-user-drag: none;
 	-khtml-user-drag: none;
@@ -148,7 +196,6 @@ button#menu-close {
     border: hidden;
     border-radius: 8px;
     padding: 16px;
-    transition: 0.5s;
     text-align: center;
     width: 80%;
     margin-left: 10%;
@@ -158,4 +205,68 @@ button#menu-close {
 
 button#menu-close:hover {
     background-color: red;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1200px) {
+    header {
+        text-align: center;
+    }
+    
+    a.header {
+        font-size: 64px;
+    }
+
+
+    p.header {
+        font-size: 30px;
+    }
+
+    nav {
+        width: 100%;
+        height: 100%;
+    }
+
+    div#nav {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 32px;
+        border-radius: 0;
+    }
+
+    h1.nav {
+        margin-top: 0;
+    }
+
+    main {
+        margin-bottom: 15vh;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    p {
+        overflow-wrap: normal;
+    }
+    
+    section {
+        border-radius: 0;
+        padding: 1%;
+        width: 98%;
+    }
+
+    footer {
+        padding: 1%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 98%;
+        left: 0;
+        bottom: 0;
+        display: table-column;
+        border-radius: 0;
+    }
 }
