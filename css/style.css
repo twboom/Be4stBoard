@@ -18,8 +18,8 @@
 :root {
     /* Colors */
     --main-color: #7B0504;
-    --button-color: #4d97bf;
-    --button-hover: #1851a7;
+    --accent-light: #4d97bf;
+    --accent-dark: #1851a7;
 
     /* Drop shadow */
     --shadow: drop-shadow(0 0 10px #313131);
@@ -27,6 +27,40 @@
 
 /* Styling */
 
+/* General */
 body {
     background-color: var(--main-color);
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    width: min-content;
+    margin: auto;
+}
+
+h1.header {
+    font-family: 'black';
+    color: white;
+    font-size: 6vw;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+h1.header:hover {
+    color: var(--accent-light);
+    transform: rotateZ(-5deg) scale(1.2);
+}
+
+h1.header:active {
+    color: var(--accent-dark)
+}
+
+p.header {
+    font-family: 'black';
+    font-size: 2vw;
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 0;
 }
