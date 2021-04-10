@@ -3,6 +3,7 @@ const config = {
     'soundLocation': 'assets/sounds',
     'titleSuffix': ' | Be4stBoard',
     'menu': true,
+    'toDo': undefined,
     'volume': 1
 };
 
@@ -47,6 +48,7 @@ page = {
 
 function build() {
     // Adding pieces of HTML to the page
+    page.toDo = page.assets.length;
     for (let i = 0; i < page.assets.length; i++) {
         const asset = page.assets[i]
         fetch(`assets/html/${asset}.html`)
@@ -55,6 +57,7 @@ function build() {
                 document.querySelectorAll(asset).forEach(el => {
                     el.innerHTML = html
                 });
+                page.toDo--
             });
     };
 
@@ -81,14 +84,18 @@ function build() {
     };
 
     // Setting eventlisteners
-    setTimeout(_ => {
-        document.getElementById('menu-open').addEventListener('click', menu)
-        document.getElementById('menu-close').addEventListener('click', menu)
+    const listenerInterval = setInterval(_ => {
+        if (page.toDo === 0) { addListeners; clearInterval(listenerInterval)}
     }, 100)
 
     // Adding the correct title suffix
     document.querySelector('title').innerHTML += config.titleSuffix;
 };
+
+function addListeners() {
+    document.getElementById('menu-open').addEventListener('click', menu)
+    document.getElementById('menu-close').addEventListener('click', menu)
+}
 
 function menu() {
     if (config.menu) { // Show the menu
