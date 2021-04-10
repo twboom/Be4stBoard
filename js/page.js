@@ -86,7 +86,9 @@ function build() {
     // Setting eventlisteners
     const listenerInterval = setInterval(_ => {
         if (page.toDo === 0) {
-            addListeners; clearInterval(listenerInterval);
+            clearInterval(listenerInterval);
+
+            addListeners();            
 
             let thisPage = document.URL.split('/');
             thisPage = thisPage[thisPage.length - 1]
