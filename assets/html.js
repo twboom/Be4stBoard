@@ -1,5 +1,5 @@
 /* HTML Templates */
-page.elements = []
+page.elements = [];
 
 page.elements.push({ // Header
     "parent": "header",
