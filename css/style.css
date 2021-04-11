@@ -314,7 +314,7 @@ input[type=range]::-moz-range-thumb:hover {
         left: 0;
         bottom: 0;
         display: table-column;
-        border-radius: 0;
+        border-radius: 0px;
     }
 }
 

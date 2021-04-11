@@ -1,6 +1,9 @@
 a,
 button
-
 {
     transition: 0.5s;
+}
+
+footer {
+    transition: 1s;
 }
