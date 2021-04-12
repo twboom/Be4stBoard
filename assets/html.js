@@ -1,34 +1,127 @@
-/* HTML Templates */
-page.elements = [];
+/* Page Elements Templates */
+elements = [];
 
-page.elements.push({ // Header
-    "parent": "header",
-    "content": `
-    <h1 class="header"><a class="header" id="menu-open">Be4stBoard</a></h1>
-    <p class="header">The original Be4stSie Soundboard!</p>
-    `
-})
+// Menu links
+elements.menu = [
+    {
+        "name": "Board",
+        "description": "The soundboard",
+        "link": "index.html"
+    },
+    {
+        "name": "Sources",
+        "description": "Find the sources of the sounds and some statistics!",
+        "link": "sources.html"
+    },
+    {
+        "name": "About",
+        "description": "About and info page",
+        "link": "about.html"
+    }
+]
 
-page.elements.push({ // Footer
-    "parent": "footer",
-    "content": `
-    <p class="footer">This app was made by <a href="https://thijsboom.com">Thijs Boom</a>!</p>
-    <p class="footer">Find more info <a href="about.html">here</a>!</p>
-    <p class="footer">Find the source code <a href="https://github.com/twboom/Be4stBoard">here</a>!</p>
-    `
-})
+elements.Header = class { // Header
+    constructor(parent) {
+        // Title container
+        const title = document.createElement('h1');
+        title.setAttribute('class', 'header');
+        
+        // Title text
+        const titleText = document.createElement('a');
+        titleText.setAttribute('class', 'header');
+        titleText.setAttribute('id', 'menu-open');
+        titleText.innerText = 'Be4stBoard';
+        title.appendChild(titleText)
 
-page.elements.push({ // Menu
-    "parent": "nav",
-    "content": `
-    <div id="nav">
-        <h1 class="nav"><a href="index.html" class="nav">Menu</a></h1>
-            <ul class="nav">
-                <li><a href="index.html">Board</a> - The soundboard</li>
-                <li><a href="sources.html">Sources</a> - Find the sources of the sounds and some statistics!</li>
-                <li><a href="about.html">About</a> - About this app and more information</li>
-            </ul>
-        <button class="nav" id="menu-close">Close</button>
-    </div>
-    `
-})
+        // Subtitle
+        const subtitle = document.createElement('p');
+        subtitle.setAttribute('class', 'header');
+        subtitle.innerText = 'The Original Be4stSie Soundboard!'
+
+        // Put elements on screen
+        page.appendElements(parent, [title, subtitle])
+    }
+}
+
+elements.Footer = class { // Footer
+    constructor(parent) {
+        // Maker, It's A Me :)
+            // Text
+        const maker = document.createElement('p');
+        maker.setAttribute('class', 'footer');
+        maker.innerHTML += 'This app was made by ';
+            // Link
+        const makerLink = document.createElement('a');
+        makerLink.setAttribute('href', 'https://thijsboom.com');
+        makerLink.innerHTML = 'Thijs Boom';
+        maker.appendChild(makerLink);
+
+        // More info
+            // Text
+        const info = document.createElement('p');
+        info.setAttribute('class', 'footer');
+        info.innerHTML = 'Find more info ';
+            // Link
+        const infoLink = document.createElement('a');
+        infoLink.setAttribute('href', 'info.html');
+        infoLink.innerHTML = 'here';
+        info.appendChild(infoLink);
+
+        // Source code
+            // Text
+        const source = document.createElement('p');
+        source.setAttribute('class', 'footer');
+        source.innerHTML = 'Find the source code ';
+            // Link
+        const sourceLink = document.createElement('a');
+        sourceLink.setAttribute('href', 'https://github.com/twboom/be4stboard');
+        sourceLink.innerHTML = 'here';
+        source.appendChild(sourceLink);
+
+        page.appendElements(parent, [maker, info, source])
+    }
+}
+
+elements.Nav = class {
+    constructor(parent) {
+        const nav = document.createElement('div');
+        nav.setAttribute('id', 'nav');
+
+        const title = document.createElement('h1');
+        title.setAttribute('class', 'nav');
+        const titleContent = document.createElement('a')
+        titleContent.setAttribute('class', 'nav');
+        titleContent.setAttribute('href', 'index.html');
+        titleContent.innerText = 'Menu'
+        title.appendChild(titleContent);
+        nav.appendChild(title)
+
+        const list = document.createElement('ul');
+        list.setAttribute('class', 'nav');
+        // Set links
+        for (let link in elements.menu) {
+            link = elements.menu[link];
+            const li = document.createElement('li');
+            const obj = document.createElement('a');
+
+            obj.innerText = link.name;
+            obj.setAttribute('href', link.link)
+
+            li.appendChild(obj);
+
+            li.innerHTML += ` - ${link.description}`
+
+            list.appendChild(li);
+        };
+        nav.appendChild(list)
+
+        // Close button
+        const btn = document.createElement('button');
+        btn.setAttribute('class', 'nav');
+        btn.setAttribute('id', 'menu-close')
+        btn.innerText = 'Close'
+        nav.appendChild(btn)
+
+        page.appendElements(parent, [nav])
+    }
+}

@@ -86,7 +86,7 @@ const setVolume = async function(evt, init) {
     if (!init) { slider = evt.target; }
     const display = document.getElementById('volume-display');
     session.volume = parseFloat(slider.value);
-    display.innerText = (Math.round(slider.value * 10 ) / 10) * 10;
+    display.innerText = Math.round(slider.value * 10 * 10 ) / 10;
 }
 
 // Initiate board
@@ -96,7 +96,19 @@ async function initiate(sounds) {
     session.board = new Board(sounds);
     session.board.create('#sound-button-container');
     document.getElementById('volume').addEventListener('input', setVolume);
-    setVolume(undefined, true)
+    setVolume(undefined, true);
+    document.querySelector('h1.header').addEventListener('mouseover', _ => {
+        session.volumeTimout = setTimeout(_ => {
+            document.getElementById('volume').setAttribute('max', 1.1);
+            document.getElementById('volume').value = 1.1;
+            session.volume = 1.1;
+            document.getElementById('volume-display').innerText = 11;
+        }, 1000)
+    });
+    document.querySelector('h1.header').addEventListener('mouseout', _ => {
+        clearTimeout(session.volumeTimout);
+
+    })
     const loadTime = Date.now() - startTime;
     console.log(`(${utility.getTime()}) BOARD:  Created board in ${loadTime} ms`)
 }

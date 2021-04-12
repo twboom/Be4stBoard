@@ -9,13 +9,10 @@ page.config = { // Config
 page.build = async function() {
     const startTime = Date.now()
 
-    // Add elements to the page
-    for (let i = 0; i< page.elements.length; i++) {
-        const obj = page.elements[i];
-        document.querySelectorAll(obj.parent).forEach(el => {
-            el.innerHTML = obj.content
-        })
-    }
+    // Add general elements
+    new elements.Header(document.getElementsByTagName('header')[0]);
+    new elements.Footer(document.getElementsByTagName('footer')[0]);
+    new elements.Nav(document.getElementsByTagName('nav')[0]);
 
     // Add event listeners
     document.getElementById('menu-open').addEventListener('click', page.menu);
@@ -50,6 +47,13 @@ page.menu = function() {
         document.body.style.overflow = 'visible';
         document.getElementsByTagName('nav')[0].style.display = 'none';
         page.config.menu = false;
+    }
+}
+
+// Auxilary code
+page.appendElements = function(parent, objs) {
+    for (obj in objs) {
+        parent.appendChild(objs[obj])
     }
 }
 
