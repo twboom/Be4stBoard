@@ -63,7 +63,7 @@ elements.Footer = class { // Footer
         info.innerHTML = 'Find more info ';
             // Link
         const infoLink = document.createElement('a');
-        infoLink.setAttribute('href', 'info.html');
+        infoLink.setAttribute('href', 'about.html');
         infoLink.innerHTML = 'here';
         info.appendChild(infoLink);
 
