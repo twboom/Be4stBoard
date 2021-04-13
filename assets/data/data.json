@@ -3,181 +3,147 @@
         {
             "name": "OMG",
             "slug": "omg",
-            "extension": "mp3",
             "volume": 0.5
         },
         {
             "name": "McDonalds Zombie",
-            "slug": "mcdzombie",
-            "extension": "mp3"
+            "slug": "mcdzombie"
         },
         {
             "name": "Fuck",
-            "slug": "fuck",
-            "extension": "mp3"
+            "slug": "fuck"
         },
         {
             "name": "FIIIIGGGHTTT",
             "slug": "fight",
-            "extension": "mp3",
             "volume": 0.5
         },
         {
             "name": "HOOOOW",
             "slug": "how",
-            "extension": "mp3",
             "volume": 0.7
         },
         {
             "name": "Nice",
-            "slug": "nice",
-            "extension": "mp3"
+            "slug": "nice"
         },
         {
             "name": "Noooo Waaayy!",
             "slug": "noway",
-            "extension": "mp3",
             "volume": 0.5
         },
         {
             "name": "I'm leaving",
-            "slug": "imleaving",
-            "extension": "mp3"
+            "slug": "imleaving"
         },
         {
             "name": "It's USELESS",
-            "slug": "itsuseless",
-            "extension": "mp3"
+            "slug": "itsuseless"
         },
         {
             "name": "Whee",
-            "slug": "wee",
-            "extension": "mp3"
+            "slug": "wee"
         },
         {
             "name": "Noice",
             "slug": "noice",
-            "extension": "mp3",
             "volume": 2
         },
         {
             "name": "Hol up",
-            "slug": "holdup",
-            "extension": "mp3"
+            "slug": "holdup"
         },
         {
             "name": "Dammit",
             "slug": "dammit",
-            "extension": "mp3",
             "volume": 1.5
         },
         {
             "name": "WHOEHAAAAA",
             "slug": "whoeha",
-            "extension": "mp3",
             "volume": 0.5
         },
         {
             "name": "I'm pressing a lot of buttons",
             "slug": "impressingbuttons",
-            "extension": "mp3",
             "volume": 1.5
         },
         {
             "name": "FUUUUCCCCKKKKK",
             "slug": "fuck2",
-            "extension": "mp3",
             "volume": 0.5
         },
         {
             "name": "tOktIk",
-            "slug": "toktik",
-            "extension": "mp3"
+            "slug": "toktik"
         },
         {
             "name": "Knäckebröd",
-            "slug": "knackebrod",
-            "extension": "mp3"
+            "slug": "knackebrod"
         },
         {
             "name": "no NO NOOOOOO",
-            "slug": "nonono",
-            "extension": "mp3"
+            "slug": "nonono"
         },
         {
             "name": "Fuck NO",
-            "slug": "fuckno",
-            "extension": "mp3"
+            "slug": "fuckno"
         },
         {
             "name": "What The Fuck",
-            "slug": "wtf",
-            "extension": "mp3"
+            "slug": "wtf"
         },
         {
             "name": "Fuck Fuck Fuck Fuck",
-            "slug": "fuckfuckfuckfuck",
-            "extension": "mp3"
+            "slug": "fuckfuckfuckfuck"
         },
         {
             "name": "What What WHAAT?!",
-            "slug": "what",
-            "extension": "mp3"
+            "slug": "what"
         },
         {
             "name": "That's BULLSHIT",
-            "slug": "bullshit",
-            "extension": "mp3"
+            "slug": "bullshit"
         },
         {
             "name": "Did I do somthing stupid?",
-            "slug": "somethingstupid",
-            "extension": "mp3"
+            "slug": "somethingstupid"
         },
         {
             "name": "Wiener",
-            "slug": "wiener",
-            "extension": "mp3"
+            "slug": "wiener"
         },
         {
             "name": "Wurrrst",
-            "slug": "wurst",
-            "extension": "mp3"
+            "slug": "wurst"
         },
         {
             "name": "douche",
-            "slug": "douche",
-            "extension": "mp3"
+            "slug": "douche"
         },
         {
             "name": "Best song ever",
-            "slug": "badpiggiessong",
-            "extension": "mp3"
+            "slug": "badpiggiessong"
         },
         {
             "name": "I'm so good",
-            "slug": "imsogood",
-            "extension": "mp3"
+            "slug": "imsogood"
         },
         {
             "name": "No",
-            "slug": "noo",
-            "extension": "mp3"
+            "slug": "noo"
         },
         {
             "name": "Shut Up",
-            "slug": "shutup",
-            "extension": "mp3"
+            "slug": "shutup"
         },
         {
             "name": "*noise*",
-            "slug": "loudnoise",
-            "extension": "mp3"
+            "slug": "loudnoise"
         },
         {
             "name": "WHAT?!",
-            "slug": "what2",
-            "extension": "mp3"
+            "slug": "what2"
         }
     ],
     "sources": [

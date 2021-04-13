@@ -34,7 +34,9 @@ app.calcVolume = function(gain) {
 app.Button = class {
     constructor(sound) {
         this.name = sound.name;
-        this.path = `${app.config.defaultDirectory}/${sound.slug}.${sound.extension}`;
+        this.extension = sound.extension;
+        if (this.extension === undefined) { this.extension = 'mp3' };
+        this.path = `${app.config.defaultDirectory}/${sound.slug}.${this.extension}`;
         this.volume = sound.volume;
         this.ctx = new Audio(this.path);
         this.btn = document.createElement('button');
