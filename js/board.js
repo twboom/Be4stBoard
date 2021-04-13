@@ -5,7 +5,7 @@ const app = [];
 
 app.config = {
     "defaultDirectory": "assets/sounds",
-    "json": "assets/data/sounds.json"
+    "json": "assets/data/data.json"
 };
 
 session = {
@@ -18,7 +18,7 @@ fetch(app.config.json)
     .then(response => response.json())
     .then(json => {
         session.sounds = json;
-        initiate(json);
+        initiate(json.sounds);
     })
 
 app.calcVolume = function(gain) {

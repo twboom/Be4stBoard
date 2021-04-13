@@ -3,13 +3,9 @@
 let data = {};
 
 // Fetching all the sources
-fetch('assets/data/sources.json')
+fetch('assets/data/data.json')
     .then(response => response.json())
-    .then(json => data.sources = json)
-
-fetch('assets/data/sounds.json')
-    .then(response => response.json())
-    .then(json => data.sounds = json)
+    .then(json => data = json)
 
 function createSources() {
     for (let i = 0; i < data.sources.length; i++) {
@@ -36,6 +32,9 @@ function createSources() {
             link.setAttribute('href', source.link);
             link.innerText = `here`;
             linkContainer.appendChild(link);
+            if (source.platform !== undefined) {
+                linkContainer.innerHTML += ` on ${source.platform.charAt(0).toUpperCase() + source.platform.slice(1)}!`
+            }
             section.appendChild(linkContainer);
         }
         
