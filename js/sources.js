@@ -52,6 +52,7 @@ sources.Source = class{
 
         // Adding the sound list
         const list = document.createElement('ul');
+
         // Adding the list items to the list
         for (let x = 0; x < source.sounds.length; x++) {
             const li = document.createElement('li');
@@ -60,6 +61,8 @@ sources.Source = class{
             list.appendChild(li);
         }
         section.appendChild(list);
+
+        
         return section
     };
 };
