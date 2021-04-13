@@ -31,7 +31,7 @@ app.calcVolume = function(gain) {
 }
 
 // Code for buttons
-const Button = class {
+app.Button = class {
     constructor(sound) {
         this.name = sound.name;
         this.path = `${app.config.defaultDirectory}/${sound.slug}.${sound.extension}`;
@@ -63,7 +63,7 @@ const Button = class {
 }
 
 // Code for board
-const Board = class {
+app.Board = class {
     constructor(sounds) {
         this.sounds = sounds;
         this.buttons = [];
@@ -72,7 +72,7 @@ const Board = class {
     create = function(container) {
         container = document.querySelector(container)
         for (let i = 0; i < this.sounds.length; i++) {
-            const btn = new Button(this.sounds[i]);
+            const btn = new app.Button(this.sounds[i]);
             btn.create(container)
             this.buttons.push(btn);
         }
@@ -81,23 +81,28 @@ const Board = class {
 
 // Code for controllers
 
-const setVolume = async function(evt, init) {
+app.setVolume = async function(evt, init) {
     let slider = document.getElementById('volume')
     if (!init) { slider = evt.target; }
     const display = document.getElementById('volume-display');
-    session.volume = parseFloat(slider.value);
-    display.innerText = Math.round(slider.value * 10 * 10 ) / 10;
+    session.volume = parseInt(slider.value) / 100;
+    display.innerText = parseInt(slider.value) / 10
 }
 
 // Initiate board
 
 async function initiate(sounds) {
+    // Starting timer
     const startTime = Date.now()
-    session.board = new Board(sounds);
+
+    // Creating board
+    session.board = new app.Board(sounds);
     session.board.create('#sound-button-container');
-    document.getElementById('volume').addEventListener('input', setVolume);
-    setVolume(undefined, true);
-    document.querySelector('h1.header').addEventListener('mouseover', _ => {
+
+    // Setting volume
+    document.getElementById('volume').addEventListener('input', app.setVolume);
+    app.setVolume(undefined, true);
+    document.querySelector('a.header').addEventListener('mouseover', _ => {
         session.volumeTimout = setTimeout(_ => {
             document.getElementById('volume').setAttribute('max', 1.1);
             document.getElementById('volume').value = 1.1;
@@ -109,6 +114,8 @@ async function initiate(sounds) {
         clearTimeout(session.volumeTimout);
 
     })
+
+    // Stopping timer and evaluating
     const loadTime = Date.now() - startTime;
     console.log(`(${utility.getTime()}) BOARD:  Created board in ${loadTime} ms`)
 }
