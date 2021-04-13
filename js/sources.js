@@ -1,16 +1,20 @@
 /* Sources list code */
 
+const sources = [];
+const stats = [];
+
 let data = {};
 
 // Fetching all the sources
 fetch('assets/data/data.json')
     .then(response => response.json())
-    .then(json => data = json)
+    .then(json => {
+        data = json;
+        initiate()
+    })
 
-function createSources() {
-    for (let i = 0; i < data.sources.length; i++) {
-        const source = data.sources[i]
-
+sources.Source = class{
+    constructor(source) {
         // Creating section
         const section = document.createElement('section')
 
@@ -47,24 +51,30 @@ function createSources() {
         // Adding the sound list
         const list = document.createElement('ul');
         // Adding the list items to the list
-        for (x = 0; x < source.sounds.length; x++) {
+        for (let x = 0; x < source.sounds.length; x++) {
             const li = document.createElement('li');
             const sound = data.sounds.find( ({ slug }) => slug === source.sounds[x])
             li.innerHTML = sound.name;
             list.appendChild(li);
         }
         section.appendChild(list)
+        return section
+    }
+}
+
+sources.createSources = function () {
+    for (let i = 0; i < data.sources.length; i++) {
+        const source = data.sources[i];
+
+        // Creating section
+        const section = new sources.Source(source)
         
         // Appending section to main element
         document.querySelector('main').appendChild(section)
     }
 }
 
-function getCountDisplay(value) {
-    return document.getElementById(`${value}-count`)
-}
-
-function getUniqueClippers() {
+stats.uniqueClippers = function() {
     const clippers = new Set();
     for (item in data.sources) {
         clippers.add(data.sources[item].clipper)
@@ -72,20 +82,13 @@ function getUniqueClippers() {
     return clippers.size
 }
 
-function setStats() {
-    getCountDisplay('sound').innerHTML = data.sounds.length;
-    getCountDisplay('source').innerHTML = data.sources.length;
-    getCountDisplay('clipper').innerHTML = getUniqueClippers()
+stats.setStats = function() {
+    document.getElementById(`sound-count`).innerHTML = data.sounds.length;
+    document.getElementById(`source-count`).innerHTML = data.sources.length;
+    document.getElementById(`clipper-count`).innerHTML = stats.uniqueClippers()
 }
 
-function init() {
-    if (data.sounds !== undefined && data.sources !== undefined) {
-        clearInterval(initInterval)
-
-        createSources();
-        setStats();
-
-    }
+async function initiate() {
+    sources.createSources();
+    stats.setStats();
 }
-
-const initInterval = setInterval(init, 50)
