@@ -124,6 +124,35 @@ utility.getTime = function() {
     return `${hours}:${minutes}:${seconds}, ${ms}ms`;
 };
 
+// DARK MODE RULEZZ
+utility.darkMode = function() {
+    let mode = preferences.get('dark_mode');
+    console.log(mode) // REMOVE BEFORE PRODUCTION
+
+    if (mode === undefined) {
+        preferences.set('dark_mode', false);
+        mode = false
+    };
+
+    const style = document.documentElement.style;
+    console.log(style.root)
+
+    switch(mode) {
+        case true: // Was true, now disabling
+            style.setProperty('--background-color', '#ffffff'); // Background color
+            style.setProperty('--text-color', '#000000') // Text color
+            break;
+
+        case false: // Was false, now enabling
+            style.setProperty('--background-color', '#060606'); // Background color
+            style.setProperty('--text-color', '#ffffff') // Text color
+            style.setProperty('--shadow', 'drop-shadow(0 0 10px #000000)')
+            break;
+    }
+
+    console.log(mode) // REMOVE BEFORE PRODUCTION
+}
+
 // Get storage API availability
 utility.checkStorage = function(type) { // From: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
     let storage;

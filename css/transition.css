@@ -4,6 +4,8 @@ button
     transition: 0.5s;
 }
 
-footer {
+footer,
+section
+{
     transition: 1s;
 }

@@ -18,6 +18,8 @@
 :root {
     /* Colors */
     --main-color: #7B0504;
+    --background-color: #ffffff; /* Background of textfields, controlled by darkmode */
+    --text-color: #000000; /* Color of text, controlled by darkmode */
     --accent-light: #4d97bf;
     --accent-dark: #1851a7;
 
@@ -40,16 +42,19 @@ main {
 
 h1 {
     font-family: 'black';
+    color: var(--text-color);
     font-size: 32px;
 }
 
 h2 {
     font-family: 'medium';
+    color: var(--text-color);
     font-size: 32px;
 }
 
 p {
     font-family: 'medium';
+    color: var(--text-color);
     font-size: 24px;
     word-wrap: break-word;
 }
@@ -68,6 +73,7 @@ ul {
 
 li {
     font-family: 'medium';
+    color: var(--text-color);
     font-size: 24px;
 }
 
@@ -77,7 +83,7 @@ article {
 }
 
 section {
-    background-color: white;
+    background-color: var(--background-color);
     width: 70%;
     margin: auto;
     padding: 16px;
@@ -135,7 +141,7 @@ p.header {
 footer {
     width: 80%;
     margin: auto;
-    background-color: white;
+    background-color: var(--background-color);
     position: fixed;
     bottom: 16px;
     left: 10%;
@@ -166,13 +172,14 @@ nav {
     top: 0;
     z-index: 10;
     background-color: #31313131;
+    backdrop-filter: blur(10px);
 }
 
 div#nav {
     width: 50%;
     margin: 5% auto;
     padding: 4px;
-    background-color: white;
+    background-color: var(--background-color);
     border: hidden;
     border-radius: 16px;
 }
@@ -184,7 +191,7 @@ h1.nav {
 }
 
 a.nav {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 
