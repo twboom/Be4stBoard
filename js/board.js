@@ -38,7 +38,6 @@ app.Button = class {
         if (this.extension === undefined) { this.extension = 'mp3' };
         this.path = `${app.config.defaultDirectory}/${sound.slug}.${this.extension}`;
         this.volume = sound.volume;
-        this.ctx = new Audio(this.path);
         this.btn = document.createElement('button');
         this.btn.innerHTML = this.name;
         this.btn.setAttribute('class', 'sound-button');
@@ -53,9 +52,10 @@ app.Button = class {
     }
 
     play = function() {
+        const ctx = new Audio(this.path)
         const volume = app.calcVolume(this.volume)
-        this.ctx.volume = volume;
-        this.ctx.play();    
+        ctx.volume = volume;
+        ctx.play();    
         console.log(`(${utility.getTime()}) USER:  Played ${this.name} with volume ${volume * 10}`)
     }
 
