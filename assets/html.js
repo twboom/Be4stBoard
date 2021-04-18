@@ -6,7 +6,7 @@ elements.menu = [
     {
         "name": "Board",
         "description": "The soundboard",
-        "link": "index.html"
+        "link": "soundboard.html"
     },
     {
         "name": "Sources",
@@ -91,7 +91,7 @@ elements.Nav = class {
         title.setAttribute('class', 'nav');
         const titleContent = document.createElement('a')
         titleContent.setAttribute('class', 'nav');
-        titleContent.setAttribute('href', 'index.html');
+        titleContent.setAttribute('href', 'soundboard.html');
         titleContent.innerText = 'Menu'
         title.appendChild(titleContent);
         nav.appendChild(title)
