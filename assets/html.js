@@ -134,9 +134,6 @@ elements.Nav = class {
         const darkModeLabel = document.createElement('label');
         darkModeLabel.setAttribute('for', 'dark_mode');
         darkModeLabel.innerText = 'Dark Mode';
-        darkModeLabel.addEventListener('click', _ => {
-            utility.darkMode()
-        })
         prefContainer.appendChild(darkMode);
         prefContainer.appendChild(darkModeLabel);
 
