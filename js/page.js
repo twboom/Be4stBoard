@@ -127,7 +127,6 @@ utility.getTime = function() {
 // DARK MODE RULEZZ
 utility.darkMode = function() {
     let mode = preferences.get('dark_mode');
-    console.log(mode) // REMOVE BEFORE PRODUCTION
 
     if (mode === undefined) {
         preferences.set('dark_mode', false);
@@ -135,22 +134,30 @@ utility.darkMode = function() {
     };
 
     const style = document.documentElement.style;
-    console.log(style.root)
 
     switch(mode) {
         case true: // Was true, now disabling
+            
+            // Set properties
             style.setProperty('--background-color', '#ffffff'); // Background color
             style.setProperty('--text-color', '#000000') // Text color
+            style.setProperty('--shadow', 'drop-shadow(0 0 10px #313131)') // Drop shadow
+
+            // Change state
+            preferences.set('dark_mode', false)
             break;
 
         case false: // Was false, now enabling
+
+            // Set properties
             style.setProperty('--background-color', '#060606'); // Background color
             style.setProperty('--text-color', '#ffffff') // Text color
-            style.setProperty('--shadow', 'drop-shadow(0 0 10px #000000)')
+            style.setProperty('--shadow', 'drop-shadow(0 0 10px #000000)') // Drop shadow
+
+            // Change state
+            preferences.set('dark_mode', true)
             break;
     }
-
-    console.log(mode) // REMOVE BEFORE PRODUCTION
 }
 
 // Get storage API availability
