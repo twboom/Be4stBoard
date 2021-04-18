@@ -144,10 +144,13 @@ utility.darkMode = function(toggle) {
     switch(mode) {
         case true: // Was true, now disabling
             
+            // LIGHT MODE
             // Set properties
             style.setProperty('--background-color', '#ffffff'); // Background color
             style.setProperty('--text-color', '#000000'); // Text color
             style.setProperty('--shadow', 'drop-shadow(0 0 10px #313131)'); // Drop shadow
+            style.setProperty('--accent-light', '#4d97bf'); // Light accent color
+            style.setProperty('--accent-dark', '#1851a7'); // Dark accent color
 
             // Change state
             if (!toggle) { preferences.set('dark_mode', false) };
@@ -156,10 +159,13 @@ utility.darkMode = function(toggle) {
 
         case false: // Was false, now enabling
 
+            // DARK MODE
             // Set properties
             style.setProperty('--background-color', '#060606'); // Background color
             style.setProperty('--text-color', '#ffffff'); // Text color
             style.setProperty('--shadow', 'drop-shadow(0 0 10px #000000)'); // Drop shadow
+            style.setProperty('--accent-light', '#1851a7'); // Light accent color
+            style.setProperty('--accent-dark', '#4d97bf'); // Dark accent color
 
             // Change state
             if (!toggle) { preferences.set('dark_mode', true) };
