@@ -83,7 +83,7 @@ elements.Footer = class { // Footer
 }
 
 elements.Nav = class {
-    constructor(parent, preferences) {
+    constructor(parent, prefs) {
         const nav = document.createElement('div');
         nav.setAttribute('id', 'nav');
 
@@ -116,29 +116,31 @@ elements.Nav = class {
         nav.appendChild(list);
 
         // Config / Preferences
-        const prefContainer = document.createElement('div');
-        prefContainer.setAttribute('class', 'nav');
+        if (prefs) {
+            const prefContainer = document.createElement('div');
+            prefContainer.setAttribute('class', 'nav');
+            
+            const prefHeader = document.createElement('h2');
+            prefHeader.innerText = 'Preferences';
+            prefContainer.appendChild(prefHeader);
+
+            // Dark mode
+            const darkMode = document.createElement('input');
+            darkMode.setAttribute('type', 'checkbox');
+            darkMode.setAttribute('name', 'dark_mode');
+            darkMode.setAttribute('id', 'dark_mode');
+            darkMode.addEventListener('click', _ => {
+                utility.darkMode()
+            })
+            const darkModeLabel = document.createElement('label');
+            darkModeLabel.setAttribute('for', 'dark_mode');
+            darkModeLabel.innerText = 'Dark Mode';
+            prefContainer.appendChild(darkMode);
+            prefContainer.appendChild(darkModeLabel);
+
+            nav.appendChild(prefContainer);
+        }
         
-        const prefHeader = document.createElement('h2');
-        prefHeader.innerText = 'Preferences';
-        prefContainer.appendChild(prefHeader);
-
-        // Dark mode
-        const darkMode = document.createElement('input');
-        darkMode.setAttribute('type', 'checkbox');
-        darkMode.setAttribute('name', 'dark_mode');
-        darkMode.setAttribute('id', 'dark_mode');
-        darkMode.addEventListener('click', _ => {
-            utility.darkMode()
-        })
-        const darkModeLabel = document.createElement('label');
-        darkModeLabel.setAttribute('for', 'dark_mode');
-        darkModeLabel.innerText = 'Dark Mode';
-        prefContainer.appendChild(darkMode);
-        prefContainer.appendChild(darkModeLabel);
-
-        nav.appendChild(prefContainer);
-
         // Close button
         const btn = document.createElement('button');
         btn.setAttribute('class', 'nav');
