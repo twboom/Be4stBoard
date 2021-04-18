@@ -84,11 +84,12 @@ app.Board = class {
 // Code for controllers
 
 app.setVolume = async function(evt, init) {
-    let slider = document.getElementById('volume')
-    if (!init) { slider = evt.target; }
+    let slider = document.getElementById('volume');
+    if (!init) { slider = evt.target; };
     const display = document.getElementById('volume-display');
     session.volume = parseInt(slider.value) / 100;
-    display.innerText = parseInt(slider.value) / 10
+    display.innerText = parseInt(slider.value) / 10;
+    if (slider.value <= 100 && slider.getAttribute('max', 110)) { slider.setAttribute('max', 100) }
 }
 
 // Initiate board
@@ -106,15 +107,15 @@ async function initiate(sounds) {
     app.setVolume(undefined, true);
     document.querySelector('a.header').addEventListener('mouseover', _ => {
         session.volumeTimout = setTimeout(_ => {
-            document.getElementById('volume').setAttribute('max', 1.1);
-            document.getElementById('volume').value = 1.1;
+            document.getElementById('volume').setAttribute('max', 110);
+            document.getElementById('volume').value = 110;
             session.volume = 1.1;
             document.getElementById('volume-display').innerText = 11;
+            console.log(`Well done! You've just set the volume to 11!`)
         }, 1000)
     });
     document.querySelector('h1.header').addEventListener('mouseout', _ => {
         clearTimeout(session.volumeTimout);
-
     })
 
     // Stopping timer and evaluating
