@@ -171,7 +171,7 @@ nav {
     left: 0;
     top: 0;
     z-index: 10;
-    background-color: #31313131;
+    background-color: #00000070;
     backdrop-filter: blur(10px);
 }
 

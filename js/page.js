@@ -36,6 +36,9 @@ page.build = async function() {
     // Initiate preferences
     preferences.init();
 
+    // Activate darkmode (according to preferences)
+    utility.darkMode(true);
+
     const loadTime = Date.now() - startTime;
     console.log(`(${utility.getTime()}) PAGE:  Finished page loading in ${loadTime} ms`);
 };
@@ -97,7 +100,7 @@ preferences.init = function() {
     // Setting preferences obj if undefined
     if (prefs === undefined) {
         localStorage.setItem('preferences', '{}');
-        console.log(`(${utility.getTime()}) PREFERENCES:  Preferences not found`);
+        console.warn(`(${utility.getTime()}) PREFERENCES:  Preferences not found`);
         return
     };
 
@@ -125,13 +128,15 @@ utility.getTime = function() {
 };
 
 // DARK MODE RULEZZ
-utility.darkMode = function() {
+utility.darkMode = function(toggle) {
     let mode = preferences.get('dark_mode');
 
     if (mode === undefined) {
         preferences.set('dark_mode', false);
         mode = false
     };
+
+    if (toggle) { mode = !mode };
 
     const style = document.documentElement.style;
 
@@ -144,7 +149,7 @@ utility.darkMode = function() {
             style.setProperty('--shadow', 'drop-shadow(0 0 10px #313131)') // Drop shadow
 
             // Change state
-            preferences.set('dark_mode', false)
+            if (!toggle) { preferences.set('dark_mode', false) }
             break;
 
         case false: // Was false, now enabling
@@ -155,7 +160,7 @@ utility.darkMode = function() {
             style.setProperty('--shadow', 'drop-shadow(0 0 10px #000000)') // Drop shadow
 
             // Change state
-            preferences.set('dark_mode', true)
+            if (!toggle) { preferences.set('dark_mode', true) }
             break;
     }
 }
