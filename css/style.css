@@ -67,6 +67,12 @@ a:hover {
     color: var(--accent-dark);
 }
 
+label {
+    font-family: 'medium';
+    font-size: 24px;
+    color: var(--text-color)
+}
+
 ul {
     text-align: left;
 }
@@ -195,9 +201,11 @@ a.nav {
     text-decoration: none;
 }
 
-ul.nav {
+div.nav,
+ul.nav
+{
     width: 50%;
-    margin: auto;
+    margin: 5% auto;
 }
 
 button#menu-close {

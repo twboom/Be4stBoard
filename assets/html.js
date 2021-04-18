@@ -113,7 +113,34 @@ elements.Nav = class {
 
             list.appendChild(li);
         };
-        nav.appendChild(list)
+        nav.appendChild(list);
+
+        // Config / Preferences
+        const prefContainer = document.createElement('div');
+        prefContainer.setAttribute('class', 'nav');
+        
+        const prefHeader = document.createElement('h2');
+        prefHeader.innerText = 'Preferences';
+        prefContainer.appendChild(prefHeader);
+
+        // Dark mode
+        const darkMode = document.createElement('input');
+        darkMode.setAttribute('type', 'checkbox');
+        darkMode.setAttribute('name', 'dark_mode');
+        darkMode.setAttribute('id', 'dark_mode');
+        darkMode.addEventListener('click', _ => {
+            utility.darkMode()
+        })
+        const darkModeLabel = document.createElement('label');
+        darkModeLabel.setAttribute('for', 'dark_mode');
+        darkModeLabel.innerText = 'Dark Mode';
+        darkModeLabel.addEventListener('click', _ => {
+            utility.darkMode()
+        })
+        prefContainer.appendChild(darkMode);
+        prefContainer.appendChild(darkModeLabel);
+
+        nav.appendChild(prefContainer);
 
         // Close button
         const btn = document.createElement('button');

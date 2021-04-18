@@ -139,30 +139,33 @@ utility.darkMode = function(toggle) {
     if (toggle) { mode = !mode };
 
     const style = document.documentElement.style;
+    const btn = document.getElementById('dark_mode');
 
     switch(mode) {
         case true: // Was true, now disabling
             
             // Set properties
             style.setProperty('--background-color', '#ffffff'); // Background color
-            style.setProperty('--text-color', '#000000') // Text color
-            style.setProperty('--shadow', 'drop-shadow(0 0 10px #313131)') // Drop shadow
+            style.setProperty('--text-color', '#000000'); // Text color
+            style.setProperty('--shadow', 'drop-shadow(0 0 10px #313131)'); // Drop shadow
 
             // Change state
-            if (!toggle) { preferences.set('dark_mode', false) }
+            if (!toggle) { preferences.set('dark_mode', false) };
+            btn.checked = !mode;
             break;
 
         case false: // Was false, now enabling
 
             // Set properties
             style.setProperty('--background-color', '#060606'); // Background color
-            style.setProperty('--text-color', '#ffffff') // Text color
-            style.setProperty('--shadow', 'drop-shadow(0 0 10px #000000)') // Drop shadow
+            style.setProperty('--text-color', '#ffffff'); // Text color
+            style.setProperty('--shadow', 'drop-shadow(0 0 10px #000000)'); // Drop shadow
 
             // Change state
-            if (!toggle) { preferences.set('dark_mode', true) }
+            if (!toggle) { preferences.set('dark_mode', true) };
+            btn.checked = !mode;
             break;
-    }
+    };    
 }
 
 // Get storage API availability
