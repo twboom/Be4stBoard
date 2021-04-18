@@ -67,7 +67,6 @@ preferences.prefs = {};
 preferences.set = function(key, value) {
     // Get data from local storage
     let prefs = JSON.parse(localStorage.preferences);
-    console.log(prefs)
 
     // Set the value
     prefs[key] = value;
@@ -75,8 +74,22 @@ preferences.set = function(key, value) {
     // Remove undefined stuff from object
     Object.keys(prefs).forEach(key => prefs[key] === undefined ? delete prefs[key] : {});
 
+    // Return if key is undefined
+    if (key === undefined) { return }
+
+    // Log to console
+    console.log(`(${utility.getTime()}) STORAGE:  Set item '${key}' to '${value}'`)
+
     // Write back to local storage
     localStorage.preferences = JSON.stringify(prefs)
+}
+
+preferences.get = function(key) {
+    // Get data from local storage
+    const prefs = JSON.parse(localStorage.preferences);
+
+    // Return correct data
+    return prefs[key]
 }
 
 preferences.init = function() {
