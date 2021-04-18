@@ -62,7 +62,6 @@ page.appendElements = function(parent, objs) {
 
 /* Preferences */
 const preferences = [];
-preferences.prefs = {};
 
 preferences.set = function(key, value) {
     // Get data from local storage
@@ -78,7 +77,7 @@ preferences.set = function(key, value) {
     if (key === undefined) { return }
 
     // Log to console
-    console.log(`(${utility.getTime()}) STORAGE:  Set item '${key}' to '${value}'`)
+    console.log(`(${utility.getTime()}) PREFERENCES:  Set item '${key}' to '${value}'`)
 
     // Write back to local storage
     localStorage.preferences = JSON.stringify(prefs)
@@ -94,9 +93,23 @@ preferences.get = function(key) {
 
 preferences.init = function() {
     const prefs = localStorage.preferences;
-    
-}
 
+    // Setting preferences obj if undefined
+    if (prefs === undefined) {
+        localStorage.setItem('preferences', '{}');
+        console.log(`(${utility.getTime()}) PREFERENCES:  Preferences not found`);
+        return
+    };
+
+
+    try {
+        JSON.parse(prefs);
+    }
+    catch(e) {
+        console.warn(`(${utility.getTime()}) PREFERENCES:  Error found in preferences, resetting preferences`);
+        localStorage.setItem('preferences', '{}')
+    }
+}
 
 /* General utility code */
 utility = [];
