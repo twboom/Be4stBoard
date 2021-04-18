@@ -4,7 +4,7 @@ const page = [];
 page.config = { // Config
     "suffix": " | Be4stBoard",
     "menu": false
-}
+};
 
 page.build = async function() {
     const startTime = Date.now();
@@ -34,11 +34,11 @@ page.build = async function() {
     document.head.appendChild(link);
 
     // Initiate preferences
-    preferences.init()
+    preferences.init();
 
     const loadTime = Date.now() - startTime;
     console.log(`(${utility.getTime()}) PAGE:  Finished page loading in ${loadTime} ms`);
-}
+};
 
 page.menu = function() {
     if (!page.config.menu) { // Show the menu
@@ -50,15 +50,15 @@ page.menu = function() {
         document.body.style.overflow = 'visible';
         document.getElementsByTagName('nav')[0].style.display = 'none';
         page.config.menu = false;
-    }
-}
+    };
+};
 
 // Auxilary code
 page.appendElements = function(parent, objs) {
     for (obj in objs) {
-        parent.appendChild(objs[obj])
-    }
-}
+        parent.appendChild(objs[obj]);
+    };
+};
 
 /* Preferences */
 const preferences = [];
@@ -74,13 +74,13 @@ preferences.set = function(key, value) {
     Object.keys(prefs).forEach(key => prefs[key] === undefined ? delete prefs[key] : {});
 
     // Return if key is undefined
-    if (key === undefined) { return }
+    if (key === undefined) { return };
 
     // Log to console
-    console.log(`(${utility.getTime()}) PREFERENCES:  Set item '${key}' to '${value}'`)
+    console.log(`(${utility.getTime()}) PREFERENCES:  Set item '${key}' to '${value}'`);
 
     // Write back to local storage
-    localStorage.preferences = JSON.stringify(prefs)
+    localStorage.preferences = JSON.stringify(prefs);
 }
 
 preferences.get = function(key) {
@@ -88,7 +88,7 @@ preferences.get = function(key) {
     const prefs = JSON.parse(localStorage.preferences);
 
     // Return correct data
-    return prefs[key]
+    return prefs[key];
 }
 
 preferences.init = function() {
@@ -108,25 +108,25 @@ preferences.init = function() {
     catch(e) {
         console.warn(`(${utility.getTime()}) PREFERENCES:  Error found in preferences, resetting preferences`);
         localStorage.setItem('preferences', '{}')
-    }
-}
+    };
+};
 
 /* General utility code */
 utility = [];
 
 // Get now time, but nicely formatted
 utility.getTime = function() {
-    const now = new Date()
-    const hours = now.getHours()
+    const now = new Date();
+    const hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
     const ms = now.getMilliseconds();
-    return `${hours}:${minutes}:${seconds}, ${ms}ms`
-}
+    return `${hours}:${minutes}:${seconds}, ${ms}ms`;
+};
 
 // Get storage API availability
 utility.checkStorage = function(type) { // From: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
-    var storage;
+    let storage;
     try {
         storage = window[type];
         var x = '__storage_test__';
@@ -147,5 +147,5 @@ utility.checkStorage = function(type) { // From: https://developer.mozilla.org/e
             e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
             // acknowledge QuotaExceededError only if there's something already stored
             (storage && storage.length !== 0);
-    }
-}
+    };
+};
