@@ -1,3 +1,4 @@
+p,
 a,
 button
 {
@@ -5,7 +6,16 @@ button
 }
 
 footer,
-section
+section,
+div#nav
 {
     transition: 1s;
+}
+
+div#nav {
+    transition-property: background-color;
+}
+
+p {
+    transition-property: color;
 }
