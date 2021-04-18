@@ -83,7 +83,7 @@ elements.Footer = class { // Footer
 }
 
 elements.Nav = class {
-    constructor(parent) {
+    constructor(parent, preferences) {
         const nav = document.createElement('div');
         nav.setAttribute('id', 'nav');
 

@@ -7,12 +7,12 @@ page.config = { // Config
 }
 
 page.build = async function() {
-    const startTime = Date.now()
+    const startTime = Date.now();
 
     // Add general elements
     new elements.Header(document.getElementsByTagName('header')[0]);
     new elements.Footer(document.getElementsByTagName('footer')[0]);
-    new elements.Nav(document.getElementsByTagName('nav')[0]);
+    new elements.Nav(document.getElementsByTagName('nav')[0],utility.checkStorage('localStorage'));
 
     // Add event listeners
     document.getElementById('menu-open').addEventListener('click', page.menu);
@@ -21,20 +21,23 @@ page.build = async function() {
     // Add transitions
     const transitions = document.createElement('link');
     transitions.setAttribute('rel', 'stylesheet');
-    transitions.setAttribute('href', 'css/transition.css')
-    document.head.appendChild(transitions)
+    transitions.setAttribute('href', 'css/transition.css');
+    document.head.appendChild(transitions);
 
     // Add title suffix
-    document.querySelectorAll('title').forEach(el => { el.innerHTML += page.config.suffix })
+    document.querySelectorAll('title').forEach(el => { el.innerHTML += page.config.suffix });
 
     // Add favion
     const link = document.createElement('link');
     link.setAttribute('rel', 'shortcut icon');
-    link.setAttribute('href', 'favicon.ico')
-    document.head.appendChild(link)
+    link.setAttribute('href', 'favicon.ico');
+    document.head.appendChild(link);
 
-    const loadTime = Date.now() - startTime
-    console.log(`(${utility.getTime()}) PAGE:  Finished page loading in ${loadTime} ms`)
+    // Initiate preferences
+    preferences.init()
+
+    const loadTime = Date.now() - startTime;
+    console.log(`(${utility.getTime()}) PAGE:  Finished page loading in ${loadTime} ms`);
 }
 
 page.menu = function() {
@@ -57,8 +60,33 @@ page.appendElements = function(parent, objs) {
     }
 }
 
+/* Preferences */
+const preferences = [];
+preferences.prefs = {};
+
+preferences.set = function(key, value) {
+    // Get data from local storage
+    let prefs = JSON.parse(localStorage.preferences);
+    console.log(prefs)
+
+    // Set the value
+    prefs[key] = value;
+
+    // Remove undefined stuff from object
+    Object.keys(prefs).forEach(key => prefs[key] === undefined ? delete prefs[key] : {});
+
+    // Write back to local storage
+    localStorage.preferences = JSON.stringify(prefs)
+}
+
+preferences.init = function() {
+    const prefs = localStorage.preferences;
+    
+}
+
+
 /* General utility code */
-utility =[];
+utility = [];
 
 // Get now time, but nicely formatted
 utility.getTime = function() {
@@ -68,4 +96,30 @@ utility.getTime = function() {
     const seconds = now.getSeconds();
     const ms = now.getMilliseconds();
     return `${hours}:${minutes}:${seconds}, ${ms}ms`
+}
+
+// Get storage API availability
+utility.checkStorage = function(type) { // From: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+    var storage;
+    try {
+        storage = window[type];
+        var x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            (storage && storage.length !== 0);
+    }
 }
