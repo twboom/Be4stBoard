@@ -1,6 +1,7 @@
 p,
 a,
-button
+button,
+input#sentence
 {
     transition: 0.5s;
 }
