@@ -141,6 +141,8 @@ app.Board = class {
 
 app.favorite = function() {
     const sound = session.ctxMenu;
+
+    // Adding / Removing from favorites
     switch(session.favorites.has(sound)) {
         case true:
             session.favorites.delete(sound)
@@ -149,7 +151,10 @@ app.favorite = function() {
         case false:
             session.favorites.add(sound)
             break;
-    }
+    };
+
+    // Writing back to storage
+    preferences.set('favorite_sounds', [...session.favorites])
 }
 
 // Code for controllers
