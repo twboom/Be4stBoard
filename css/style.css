@@ -22,6 +22,7 @@
     --text-color: #000000; /* Color of text, controlled by darkmode */
     --accent-light: #4d97bf;
     --accent-dark: #1851a7;
+    --accent-yellow: #ffd700;
 
     /* Drop shadow */
     --shadow: drop-shadow(0 0 10px #313131);

@@ -51,6 +51,21 @@ button.sound-button:active {
     color: var(--accent-dark)
 }
 
+button.sound-button[data-favorite=true] {
+    background-color: var(--accent-yellow);
+    color: black;
+}
+
+button.sound-button[data-favorite=true]:hover {
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+button.sound-button[data-favorite=true]:active {
+    background-color: white;
+    color: var(--accent-dark)
+}
+
 /* CTX Menu */
 div#ctxmenu {
     width: fit-content;

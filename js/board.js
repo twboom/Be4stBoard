@@ -65,7 +65,7 @@ app.calcVolume = function(gain) {
 
 // Code for buttons
 app.Button = class {
-    constructor(sound) {
+    constructor(sound, favorite) {
         this.name = sound.name;
         this.extension = sound.extension;
         if (this.extension === undefined) { this.extension = 'mp3' };
@@ -74,6 +74,7 @@ app.Button = class {
         this.btn = document.createElement('button');
         this.btn.innerHTML = this.name;
         this.btn.setAttribute('class', 'sound-button');
+        if (favorite) { this.btn.setAttribute('data-favorite', true)}
         this.btn.dataset.sound = sound.slug;
         this.btn.addEventListener('click', _ => {
             this.play()
@@ -134,7 +135,7 @@ app.Favorites = class {
         const favorites = [...session.favorites]
         for (let i = 0; i < favorites.length; i++) {
             const sound = session.sounds.sounds.find( ({ slug }) => slug === favorites[i] );
-            const btn = new app.Button(sound);
+            const btn = new app.Button(sound, true);
             btn.create(container);
             this.favoButtons.push(btn);
         };
