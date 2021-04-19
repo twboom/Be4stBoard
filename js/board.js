@@ -141,14 +141,13 @@ app.Board = class {
 
 app.favorite = function() {
     const sound = session.ctxMenu;
-    console.log(session.favorites)
     switch(session.favorites.has(sound)) {
         case true:
-            console.log(true)
+            session.favorites.delete(sound)
             break;
 
         case false:
-            console.log(true)
+            session.favorites.add(sound)
             break;
     }
 }
