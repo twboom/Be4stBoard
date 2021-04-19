@@ -2,12 +2,12 @@
     "sounds": [
         {
             "name": "OMG",
-            "slug": "omg",
-            "volume": 0.5
+            "slug": "omg"
         },
         {
             "name": "McDonalds Zombie",
-            "slug": "mcdzombie"
+            "slug": "mcdzombie",
+            "volume": 2
         },
         {
             "name": "Fuck",
@@ -25,7 +25,8 @@
         },
         {
             "name": "Nice",
-            "slug": "nice"
+            "slug": "nice",
+            "volume": 2
         },
         {
             "name": "Noooo Waaayy!",
@@ -34,20 +35,23 @@
         },
         {
             "name": "I'm leaving",
-            "slug": "imleaving"
+            "slug": "imleaving",
+            "volume": 4
         },
         {
             "name": "It's USELESS",
-            "slug": "itsuseless"
+            "slug": "itsuseless",
+            "volume": 2
         },
         {
             "name": "Whee",
-            "slug": "wee"
+            "slug": "wee",
+            "volume": 3
         },
         {
             "name": "Noice",
             "slug": "noice",
-            "volume": 2
+            "volume": 16
         },
         {
             "name": "Hol up",

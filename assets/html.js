@@ -144,8 +144,11 @@ elements.Nav = class {
         // Close button
         const btn = document.createElement('button');
         btn.setAttribute('class', 'nav');
-        btn.setAttribute('id', 'menu-close')
-        btn.innerText = 'Close'
+        btn.setAttribute('id', 'menu-close');
+        btn.addEventListener('click', page.menu);
+        btn.innerText = 'Close';
+
+        
         nav.appendChild(btn)
 
         page.appendElements(parent, [nav])

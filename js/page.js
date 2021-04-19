@@ -16,7 +16,6 @@ page.build = async function() {
 
     // Add event listeners
     document.getElementById('menu-open').addEventListener('click', page.menu);
-    document.getElementById('menu-close').addEventListener('click', page.menu);
 
     // Add transitions
     const transitions = document.createElement('link');

@@ -5,7 +5,7 @@ const app = [];
 
 app.config = {
     "defaultDirectory": "assets/sounds",
-    "json": "assets/data/data.json"
+    "json": "assets/data/data.json",
 };
 
 session = {
@@ -55,12 +55,9 @@ fetch(app.config.json)
     })
 
 app.calcVolume = function(gain) {
-    if (session.volume === 1.1) { return 1 };
-    if (gain === undefined) { gain = 1 };
-    let output = session.volume * gain;
-    if (output < 0) { return 0 };
-    if (output > 1) { return 1 };
-    return output
+    if (Number.isNaN(gain)) { gain = 1 };
+    const output = gain * session.volume;
+    return output;
 }
 
 // Code for buttons
@@ -93,11 +90,16 @@ app.Button = class {
     }
 
     play = function() {
-        const ctx = new Audio(this.path)
-        const volume = app.calcVolume(this.volume)
-        ctx.volume = volume;
-        ctx.play();    
-        console.log(`(${utility.getTime()}) USER:  Played ${this.name} with volume ${volume * 10}`)
+        const volume = app.calcVolume(this.volume);
+        const audio = new Audio(this.path);
+        const ctx = new AudioContext();
+        const source = ctx.createMediaElementSource(audio);
+        const gainNode = ctx.createGain();
+        gainNode.gain.value = volume;
+        source.connect(gainNode);
+        gainNode.connect(ctx.destination)
+        audio.play();
+        console.log(`(${utility.getTime()}) USER:  Played ${this.name} with volume ${volume}`);
     }
 
     stop = function() {
