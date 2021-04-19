@@ -112,32 +112,40 @@ app.Button = class {
 
 // Code for board
 app.Board = class {
-    constructor(sounds, favorites) {
+    constructor(sounds) {
         this.sounds = sounds;
         this.buttons = [];
-        this.favoButtons = [];
-        this.favorites = favorites;
     }
 
-    create = function(board, favorites) {
+    create = function(board) {
         board = document.querySelector(board);
         for (let i = 0; i < this.sounds.length; i++) {
             const btn = new app.Button(this.sounds[i]);
             btn.create(board);
             this.buttons.push(btn);
         };
-
-        favorites = document.querySelector(favorites);
-        for (let i = 0; i < this.favorites; i++) {
-            const sound = this.sounds.find( ({ name }) => name === this.favorites[i].name );
-            const btn = new app.Button(sound);
-            btn.create(favorites);
-            this.favoButtons.push(btn);
-        }
     }
 }
 
 // Code for favorites
+
+app.Favorites = class {
+    constructor() {
+        this.favoButtons = [];
+    };
+
+    create = function(container) {
+        container = document.querySelector(container);
+        container.innerHTML = '';
+        const favorites = [...session.favorites]
+        for (let i = 0; i < favorites.length; i++) {
+            const sound = session.sounds.sounds.find( ({ slug }) => slug === favorites[i] );
+            const btn = new app.Button(sound);
+            btn.create(container);
+            this.favoButtons.push(btn);
+        };
+    };
+};
 
 app.favorite = function() {
     const sound = session.ctxMenu;
@@ -152,6 +160,9 @@ app.favorite = function() {
             session.favorites.add(sound)
             break;
     };
+
+    // Updating page
+    session.favoriteBoard.create('#favorite-container');
 
     // Writing back to storage
     preferences.set('favorite_sounds', [...session.favorites])
@@ -180,8 +191,11 @@ async function initiate(sounds) {
     session.favorites = new Set(favorites);
 
     // Creating board
-    session.board = new app.Board(sounds, favorites);
+    session.board = new app.Board(sounds);
     session.board.create('#sound-button-container');
+
+    session.favoriteBoard = new app.Favorites(session.favorites);
+    session.favoriteBoard.create('#favorite-container')
 
     // Setting volume
     document.getElementById('volume').addEventListener('input', app.setVolume);
