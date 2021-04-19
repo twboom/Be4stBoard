@@ -55,39 +55,42 @@
         },
         {
             "name": "Hol up",
-            "slug": "holdup"
+            "slug": "holdup",
+            "volume": 4
         },
         {
             "name": "Dammit",
             "slug": "dammit",
-            "volume": 1.5
+            "volume": 5
         },
         {
             "name": "WHOEHAAAAA",
             "slug": "whoeha",
-            "volume": 0.5
+            "volume": 0.9
         },
         {
             "name": "I'm pressing a lot of buttons",
             "slug": "impressingbuttons",
-            "volume": 1.5
+            "volume": 4
         },
         {
             "name": "FUUUUCCCCKKKKK",
-            "slug": "fuck2",
-            "volume": 0.5
+            "slug": "fuck2"
         },
         {
             "name": "tOktIk",
-            "slug": "toktik"
+            "slug": "toktik",
+            "volume": 3
         },
         {
             "name": "Knäckebröd",
-            "slug": "knackebrod"
+            "slug": "knackebrod",
+            "volume": 3
         },
         {
             "name": "no NO NOOOOOO",
-            "slug": "nonono"
+            "slug": "nonono",
+            "volume": 0.8
         },
         {
             "name": "Fuck NO",
@@ -99,7 +102,8 @@
         },
         {
             "name": "Fuck Fuck Fuck Fuck",
-            "slug": "fuckfuckfuckfuck"
+            "slug": "fuckfuckfuckfuck",
+            "volume": 1.5
         },
         {
             "name": "What What WHAAT?!",
@@ -111,19 +115,23 @@
         },
         {
             "name": "Did I do somthing stupid?",
-            "slug": "somethingstupid"
+            "slug": "somethingstupid",
+            "volume": 2
         },
         {
             "name": "Wiener",
-            "slug": "wiener"
+            "slug": "wiener",
+            "volume": 4
         },
         {
             "name": "Wurrrst",
-            "slug": "wurst"
+            "slug": "wurst",
+            "volume": 4
         },
         {
             "name": "douche",
-            "slug": "douche"
+            "slug": "douche",
+            "volume": 2
         },
         {
             "name": "Best song ever",
@@ -131,15 +139,18 @@
         },
         {
             "name": "I'm so good",
-            "slug": "imsogood"
+            "slug": "imsogood",
+            "volume": 2
         },
         {
             "name": "No",
-            "slug": "noo"
+            "slug": "noo",
+            "volume": 3
         },
         {
             "name": "Shut Up",
-            "slug": "shutup"
+            "slug": "shutup",
+            "volume": 2
         },
         {
             "name": "*noise*",
@@ -147,7 +158,8 @@
         },
         {
             "name": "WHAT?!",
-            "slug": "what2"
+            "slug": "what2",
+            "volume": 0.7
         }
     ],
     "sources": [
