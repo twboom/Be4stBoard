@@ -66,17 +66,27 @@ app.Button = class {
 
 // Code for board
 app.Board = class {
-    constructor(sounds) {
+    constructor(sounds, favorites) {
         this.sounds = sounds;
         this.buttons = [];
+        this.favoButtons = [];
+        this.favorites = favorites;
     }
 
-    create = function(container) {
-        container = document.querySelector(container)
+    create = function(board, favorites) {
+        board = document.querySelector(board);
         for (let i = 0; i < this.sounds.length; i++) {
             const btn = new app.Button(this.sounds[i]);
-            btn.create(container)
+            btn.create(board);
             this.buttons.push(btn);
+        };
+
+        favorites = document.querySelector(favorites);
+        for (let i = 0; i < this.favorites; i++) {
+            const sound = this.sounds.find( ({ name }) => name === this.favorites[i].name );
+            const btn = new app.Button(sound);
+            btn.create(favorites);
+            this.favoButtons.push(btn);
         }
     }
 }
@@ -96,10 +106,14 @@ app.setVolume = async function(evt, init) {
 
 async function initiate(sounds) {
     // Starting timer
-    const startTime = Date.now()
+    const startTime = Date.now();
+
+    // Getting favorites
+    let favorites = preferences.get('favorite_sounds');
+    if (favorites === undefined) { preferences.set('favorite_sounds', []); favorites = [] };
 
     // Creating board
-    session.board = new app.Board(sounds);
+    session.board = new app.Board(sounds, favorites);
     session.board.create('#sound-button-container');
 
     // Setting volume
