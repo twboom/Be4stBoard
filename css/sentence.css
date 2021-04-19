@@ -24,6 +24,11 @@ input#sentence {
     border-radius: 8px;
     font-family: 'medium';
     font-size: 24px;
+    color: var(--text-color)
+}
+
+input#sentence:hover {
+    background-color: var(--accent-dark);
 }
 
 input#sentence:focus {
