@@ -10,7 +10,27 @@ app.config = {
 
 session = {
     "volume": 0.5
-}
+};
+
+app.ContextMenu = class {
+    constructor(evt) {
+        const container = document.createElement('div');
+        container.setAttribute('id', 'ctxmenu');
+        container.style.left = evt.clientX + 'px';
+        container.style.top = evt.clientY + 'px';
+        console.log(evt.clientX)
+
+        const title = document.createElement('p');
+        title.innerText = evt.target.dataset.sound;
+        container.appendChild(title);
+
+        // Deleting ctxmenu
+        document.addEventListener('click', evt => {
+            if (evt.target !== container) { container.remove(); session.ctxMenu = undefined };
+        });
+        document.body.appendChild(container);
+    };
+};
 
 /* Logic */
 
@@ -41,9 +61,18 @@ app.Button = class {
         this.btn = document.createElement('button');
         this.btn.innerHTML = this.name;
         this.btn.setAttribute('class', 'sound-button');
+        this.btn.dataset.sound = sound.slug;
         this.btn.addEventListener('click', _ => {
             this.play()
         });
+        this.btn.addEventListener('contextmenu', evt => {
+            evt.preventDefault();
+            if (session.ctxMenu === sound.slug) { return };
+            if (session.ctxMenu !== undefined) { document.getElementById('ctxmenu').remove() }
+            session.ctxMenu = sound.slug;
+            new app.ContextMenu(evt);
+            console.log(evt.target);
+        })
         if (this.volume === undefined) { this.volume = 1 }
     }
 
@@ -130,6 +159,11 @@ async function initiate(sounds) {
     });
     document.querySelector('h1.header').addEventListener('mouseout', _ => {
         clearTimeout(session.volumeTimout);
+    });
+    
+    // More event listeners
+    document.addEventListener('contextmenu', evt => {
+
     })
 
     // Stopping timer and evaluating

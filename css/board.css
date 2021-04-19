@@ -51,6 +51,16 @@ button.sound-button:active {
     color: var(--accent-dark)
 }
 
+/* CTX Menu */
+div#ctxmenu {
+    background-color: var(--background-color);
+    width: min-content;
+    padding: 16px;
+    border-radius: 16px;
+    filter: var(--shadow);
+    position: absolute;
+}
+
 /* Responsive */
 
 @media only screen and (max-width: 1200px) {
