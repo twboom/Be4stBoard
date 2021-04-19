@@ -20,7 +20,7 @@ div.controller {
 }
 
 /* Buttons */
-div#sound-button-container {
+div.button-container {
     width: 80%;
     margin: auto;
     display: flex;
@@ -53,12 +53,30 @@ button.sound-button:active {
 
 /* CTX Menu */
 div#ctxmenu {
-    background-color: var(--background-color);
     width: fit-content;
-    padding: 16px;
-    border-radius: 16px;
     filter: var(--shadow);
     position: absolute;
+}
+
+button.ctx {
+    appearance: none;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: hidden;
+    border-radius: 8px;
+    outline: none;
+    padding: 16px;
+    font-family: 'medium';
+    font-size: 24px;
+}
+
+button.ctx:hover {
+    background-color: var(--accent-light);
+    color: white;
+}
+
+button.ctx:active {
+    background-color: var(--accent-dark);
 }
 
 /* Responsive */

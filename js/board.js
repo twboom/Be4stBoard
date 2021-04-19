@@ -23,11 +23,6 @@ app.ContextMenu = class {
         container.style.top = evt.clientY + 'px';
 
         // CTX Menu contents
-            // Title
-        const title = document.createElement('h1');
-        title.setAttribute('class', 'ctx');
-        title.innerText = session.sounds.sounds.find( ({ slug }) => slug === sound).name;
-        container.appendChild(title);
 
             // Buttons
         const btnContainer = document.createElement('div');
@@ -85,7 +80,6 @@ app.Button = class {
         });
         this.btn.addEventListener('contextmenu', evt => {
             evt.preventDefault();
-            if (session.ctxMenu === sound.slug) { return };
             if (session.ctxMenu !== undefined) { document.getElementById('ctxmenu').remove() }
             session.ctxMenu = sound.slug;
             new app.ContextMenu(evt);
