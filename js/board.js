@@ -14,15 +14,33 @@ session = {
 
 app.ContextMenu = class {
     constructor(evt) {
+        const sound = evt.target.dataset.sound;
+        const favorites = session.favorites;
+
         const container = document.createElement('div');
         container.setAttribute('id', 'ctxmenu');
         container.style.left = evt.clientX + 'px';
         container.style.top = evt.clientY + 'px';
-        console.log(evt.clientX)
 
-        const title = document.createElement('p');
-        title.innerText = evt.target.dataset.sound;
+        // CTX Menu contents
+            // Title
+        const title = document.createElement('h1');
+        title.setAttribute('class', 'ctx');
+        title.innerText = session.sounds.sounds.find( ({ slug }) => slug === sound).name;
         container.appendChild(title);
+
+            // Buttons
+        const btnContainer = document.createElement('div');
+
+            // Favorite button
+        const favorite = document.createElement('button');
+        favorite.setAttribute('class', 'ctx');
+        if (!favorites.has(sound)) { favorite.innerText = 'Add to favorites'}
+        else { favorite.innerText = 'Remove from favorites'};
+        favorite.addEventListener('click', app.favorite)
+        btnContainer.appendChild(favorite);
+        
+        container.appendChild(btnContainer);
 
         // Deleting ctxmenu
         document.addEventListener('click', evt => {
@@ -71,7 +89,6 @@ app.Button = class {
             if (session.ctxMenu !== undefined) { document.getElementById('ctxmenu').remove() }
             session.ctxMenu = sound.slug;
             new app.ContextMenu(evt);
-            console.log(evt.target);
         })
         if (this.volume === undefined) { this.volume = 1 }
     }
@@ -120,6 +137,22 @@ app.Board = class {
     }
 }
 
+// Code for favorites
+
+app.favorite = function() {
+    const sound = session.ctxMenu;
+    console.log(session.favorites)
+    switch(session.favorites.has(sound)) {
+        case true:
+            console.log(true)
+            break;
+
+        case false:
+            console.log(true)
+            break;
+    }
+}
+
 // Code for controllers
 
 app.setVolume = async function(evt, init) {
@@ -139,7 +172,8 @@ async function initiate(sounds) {
 
     // Getting favorites
     let favorites = preferences.get('favorite_sounds');
-    if (favorites === undefined) { preferences.set('favorite_sounds', []); favorites = [] };
+    if (favorites === undefined) { preferences.set('favorite_sounds', []) };
+    session.favorites = new Set(favorites);
 
     // Creating board
     session.board = new app.Board(sounds, favorites);
