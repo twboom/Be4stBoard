@@ -45,18 +45,21 @@ h1 {
     font-family: 'black';
     color: var(--text-color);
     font-size: 32px;
+    margin-bottom: 2px;
 }
 
 h2 {
     font-family: 'medium';
     color: var(--text-color);
     font-size: 32px;
+    margin-bottom: 2px;
 }
 
 p {
     font-family: 'medium';
     color: var(--text-color);
     font-size: 24px;
+    margin-top: 2px;
     word-wrap: break-word;
 }
 
