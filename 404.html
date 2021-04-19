@@ -1,3 +1,4 @@
+<!-- 404 page, HTTP Response Code 404 page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/page.js"></script>
+    <script src="assets/html.js"></script>
 </head>
 <body>
-    
-    <header></header>
 
-    <nav></nav>
+    <header></header> <!-- Will be filled by the page builder-->
+
+    <nav></nav> <!-- Will be filled by the page builder-->
 
     <main>
         <section>
@@ -20,11 +24,20 @@
                 <p>Read more at <a href="https://httpstatuses.com/404">httpstatuses.com</a> or at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404">MDN</a>.</p>
             </article>
         </section>
+        <section>
+            <article>
+                <h1>Bug?</h1>
+                <p>Are you <i>certain</i> that this should resolve to a page, or did I direct you to a wrong page?</p>
+                <p>Please open up an bug report on <a href="https://github.com/twboom/Be4stBoard/issues/new?assignees=&labels=bug&template=bug_report.md&title=">GitHub</a>!</p>
+                <p>Don't have a GitHub account or don't know how to open up issues? Send me a message on Discord!</p>
+            </article>
+        </section>
     </main>
 
-    <footer></footer>
+    <footer></footer> <!-- Will be filled by the page builder-->
 
-    <!-- Scripts that require page to be loaded -->
-    <script src="js/page.js"></script>
+    <script>
+        page.build()
+    </script>
 </body>
 </html>

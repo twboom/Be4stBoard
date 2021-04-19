@@ -1,0 +1,21 @@
+p,
+a,
+button
+{
+    transition: 0.5s;
+}
+
+footer,
+section,
+div#nav
+{
+    transition: 1s;
+}
+
+div#nav {
+    transition-property: background-color;
+}
+
+p {
+    transition-property: color;
+}
