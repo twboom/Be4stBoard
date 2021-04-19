@@ -1,14 +1,17 @@
-div#sentence-input {
+div.container {
     width: 50%;
     margin: auto;
     margin-bottom: 16px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
     padding: 16px;
     background-color: var(--accent-light);
     border-radius: 16px;
     filter: var(--shadow);
+}
+
+div#sentence-input {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 input#sentence {
