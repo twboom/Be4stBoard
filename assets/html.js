@@ -55,6 +55,7 @@ elements.Footer = class { // Footer
         makerLink.setAttribute('href', 'https://thijsboom.com');
         makerLink.innerHTML = 'Thijs Boom';
         maker.appendChild(makerLink);
+        maker.innerHTML += '!';
 
         // More info
             // Text
@@ -66,6 +67,7 @@ elements.Footer = class { // Footer
         infoLink.setAttribute('href', 'about.html');
         infoLink.innerHTML = 'here';
         info.appendChild(infoLink);
+        info.innerHTML += '!';
 
         // Source code
             // Text
@@ -77,6 +79,7 @@ elements.Footer = class { // Footer
         sourceLink.setAttribute('href', 'https://github.com/twboom/be4stboard');
         sourceLink.innerHTML = 'here';
         source.appendChild(sourceLink);
+        source.innerHTML += '!';
 
         page.appendElements(parent, [maker, info, source])
     }
