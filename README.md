@@ -6,6 +6,11 @@ This is a small soundboard webapp with sounds from Be4stSie!
 
 Please note: I'm not a developer, it is *not* my job. That's why my code can be very sloppy!
 
+## Features
+Be4stBoard now only has one feature, the soundboard! However, you can find *all* the sources on the [sources] page!
+
+Spoiler alert, new features are in the making!
+
 ## Be4stSie
 Be4stSie is a good friend of mine, he makes YouTube videos and streams on Twitch.
 Here are his socials:
@@ -36,3 +41,4 @@ You can contact me on Discord, Thijs#3291.
 [license]: https://github.com/twboom/Be4stBoard/blob/main/LICENSE
 [discussions]: https://github.com/twboom/Be4stBoard/discussions
 [issues]: https://github.com/twboom/Be4stBoard/issues
+[sources]: https://be4stboard.thijsboom.com/sources
