@@ -9,11 +9,6 @@ elements.menu = [
         "link": "soundboard.html"
     },
     {
-        "name": "Say-A-Sentence",
-        "description": "Make Be4stSie say a sentence!",
-        "link": "sentence.html"
-    },
-    {
         "name": "Sources",
         "description": "Find the sources of the sounds and some statistics!",
         "link": "sources.html"
