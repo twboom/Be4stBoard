@@ -56,8 +56,22 @@ sources.Source = class{
         // Adding the list items to the list
         for (let x = 0; x < source.sounds.length; x++) {
             const li = document.createElement('li');
-            const sound = data.sounds.find( ({ slug }) => slug === source.sounds[x])
+            li.setAttribute('class', 'sound-preview');
+            const sound = data.sounds.find( ({ slug }) => slug === source.sounds[x]);
             li.innerHTML = sound.name;
+            li.addEventListener('click', _ => {
+                let path = `assets/sounds/${sound.slug}`;
+                if (sound.extension === undefined) { path += '.mp3' }
+                else { path += sound.extension };
+                const audio = new Audio(path);
+                const ctx = new AudioContext();
+                const source = ctx.createMediaElementSource(audio);
+                const gainNode = ctx.createGain();
+                gainNode.gain.value = 1;
+                source.connect(gainNode);
+                gainNode.connect(ctx.destination);
+                audio.play();
+            })
             list.appendChild(li);
         }
         section.appendChild(list);

@@ -287,6 +287,10 @@ input[type=range]::-moz-range-thumb:hover {
     background-color: var(--main-color);
 }
 
+.sound-preview {
+    cursor: help;
+}
+
 /* Responsive */
 
 @media only screen and (max-width: 1200px) {
