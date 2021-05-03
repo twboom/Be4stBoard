@@ -14,6 +14,11 @@ elements.menu = [
         "link": "sources.html"
     },
     {
+        "name": "Request",
+        "description": "Request a sound yourself!",
+        "link": "request.html"
+    },
+    {
         "name": "About",
         "description": "About and info page",
         "link": "about.html"
