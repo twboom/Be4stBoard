@@ -160,6 +160,33 @@
             "name": "WHAT?!",
             "slug": "what2",
             "volume": 0.7
+        },
+        {
+            "name": "YEEAAH",
+            "slug": "yeah"
+        },
+        {
+            "name": "Finally",
+            "slug": "finally"
+        },
+        {
+            "name": "ooOOOH",
+            "slug": "ooeeh"
+        },
+        {
+            "name": "THATS a good one",
+            "slug": "thatsagoodone",
+            "volume": 1.7
+        },
+        {
+            "name": "nvm",
+            "slug": "nvm",
+            "volume": 2.8
+        },
+        {
+            "name": "I am stUpid",
+            "slug": "iamstupid",
+            "volume": 2.3
         }
     ],
     "sources": [
@@ -290,6 +317,22 @@
             "link": "https://www.twitch.tv/be4stsie/clip/HappyCrypticRhinocerosYouDontSay-Og-XL5UCGVuo7Pup",
             "available": true,
             "sounds": ["what2"]
+        },
+        {
+            "name": "oooeEEEEhhhh That's a good one!",
+            "clipper": "thijswboom",
+            "platform": "twitch",
+            "link": "https://www.twitch.tv/be4stsie/clip/AcceptableMuddyPassionfruitANELE-zvGR-SfyszHxrKBs",
+            "available": true,
+            "sounds": ["yeah", "finally", "ooeeh", "thatsagoodone"]
+        },
+        {
+            "name": "oooeEEEEhhhh That's a good one!",
+            "clipper": "thijswboom",
+            "platform": "twitch",
+            "link": "oooeEEEEhhhh That's a good one!",
+            "available": true,
+            "sounds": ["nvm", "iamstupid"]
         }
     ]
 }
