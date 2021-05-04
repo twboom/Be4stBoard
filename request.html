@@ -23,16 +23,18 @@
         <section>
             <form accept-charset="UTF-8" action="https://formsubmit.co/be4stboard@gmail.com" method="POST">
                 <label for="name" class="form">Your name: (optional)</label>
-                <input type="text" id="name" name="Name" class="form">
+                <input type="text" id="name" name="Name" class="form" placeholder="Rick Astley">
 
                 <label for="name" class="form">Your Discord name: (optional)</label>
-                <input type="text" id="discord" name="Discord" class="form" placeholder="Rick#6969">
+                <input type="text" id="discord" name="Discord" class="form" placeholder="RickAstley#6969">
 
                 <label for="name" class="form">Link to clip / video:</label>
-                <input type="url" id="link" name="Link" required class="form">
+                <input type="url" id="link" name="Link" required class="form" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
 
                 <label for="name" class="form">Please write down <i>all</i> the sounds you want from this video and the timestamps:</label>
-                <textarea name="sounds" id="Description" cols="30" rows="2" class="form"></textarea>
+                <textarea name="sounds" id="Description" cols="30" rows="2" class="form" placeholder="00:00
+00:15
+"></textarea>
 
                 <p style="text-align: center;">Please read the rules below!</p>
 
@@ -63,6 +65,13 @@
 
         let thanksURL = document.querySelector('input[type=hidden]');
         thanksURL.value = thanksURL.value.replace('url', window.location);
+
+        /* Thanks thingy */
+        if ((new URL(document.location)).searchParams.get('thanks') === 'true') {
+            let message = ''
+            message += `Thanks for submitting a sound! I'll look into it in the near future!`
+            alert(message)
+        }
     </script>
 </body>
 </html>
