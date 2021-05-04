@@ -30,6 +30,9 @@
 
                 <label for="name" class="form">Please write down <i>all</i> the sounds you want from this video and the timestamps:</label>
                 <textarea name="sounds" id="sounds" cols="30" rows="10" class="form"></textarea>
+
+                <!-- Thank you page -->
+                <input type="hidden" name="_next" value="url?thanks=true">
               
                 <button type="submit" class="form">Submit</button>
               </form>
@@ -40,6 +43,9 @@
     
     <script>
         page.build()
+
+        let thanksURL = document.querySelector('input[type=hidden]');
+        thanksURL.value = thanksURL.value.replace('url', window.location);
     </script>
 </body>
 </html>
