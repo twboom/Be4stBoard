@@ -76,6 +76,10 @@ app.Button = class {
         this.btn.addEventListener('click', _ => {
             this.play()
         });
+        this.btn.addEventListener('mouseover', _ => {
+            const audio = new Audio(this.path);
+            audio.load()
+        })
         this.btn.addEventListener('contextmenu', evt => {
             evt.preventDefault();
             if (session.ctxMenu !== undefined) { document.getElementById('ctxmenu').remove() }
