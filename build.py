@@ -63,3 +63,7 @@ if __name__ == '__main__':
     # Copy assets
     print('[*] Copying assets')
     copytree('src/assets', 'build/assets')
+
+    # Copy scripts
+    print('[*] Copying scripts')
+    copytree('src/scripts', 'build/scripts')
