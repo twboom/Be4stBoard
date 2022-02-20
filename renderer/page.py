@@ -1,6 +1,7 @@
 import renderer.minifier as minify
 from renderer.utility import append_time
 from renderer.dom import get_elements_by_tag_name, append_child, reconstruct_element
+from renderer.board import board
 
 
 # Build the page
@@ -10,14 +11,27 @@ def build_page(page) -> None:
     :param page: An object containing the page's source, target, and template
     """
 
+    print('[++] Building page:', page['target'])
+
     source = page['source']
     target = page['target']
     template = page['template']
     title = page['title']
 
+    # Check for exceptions
+    if source.endswith('!'):
+        source = source[:-1]
+        exception = check_exception(source)
+    else:
+        exception = None
+
     # Read the source file
     with open(f'src/pages/{source}', 'r') as f:
         source = f.read()
+
+    # Handle exception
+    if exception:
+        source = exception(source)
 
     # Read the template file
     if template is not None:
@@ -79,3 +93,9 @@ def include_css(html) -> str:
         html = html.replace(file, '')
 
     return html
+
+
+# Check for exception
+def check_exception(source) -> None:
+    if source == 'board.html':
+        return board
