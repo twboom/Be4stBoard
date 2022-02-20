@@ -13,6 +13,7 @@ def build_page(page) -> None:
     source = page['source']
     target = page['target']
     template = page['template']
+    title = page['title']
 
     # Read the source file
     with open(f'src/pages/{source}', 'r') as f:
@@ -23,6 +24,8 @@ def build_page(page) -> None:
         output = fill_template(template, source)
     else:
         output = source
+
+    output = output.replace('{{title}}', title)
 
     output = minify.html(output)
 

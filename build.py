@@ -42,6 +42,15 @@ if __name__ == '__main__':
             source = instructions[0]
             target = instructions[1]
 
+            # Check for title
+            target = target.split('|')
+            if len(target) == 2:
+                title = target[1]
+                target = target[0]
+            else:
+                title = target[0]
+                target = target[0]
+
             # Check for template usage
             source = source.split(':')
             if len(source) == 2:
@@ -52,7 +61,7 @@ if __name__ == '__main__':
                 source = source[0]
 
             # Add the page to the list
-            pages.append({'source': source, 'target': target, 'template': template})
+            pages.append({'source': source, 'target': target, 'template': template, 'title': title})
         
 
     # Build the pages
