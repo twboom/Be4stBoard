@@ -1,2 +1,5 @@
 # Ableton files
 *.asd
+
+# Python files
+__pycache__/
