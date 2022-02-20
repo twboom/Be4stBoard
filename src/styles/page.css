@@ -1,0 +1,24 @@
+body {
+    background-color: var(--main-color);
+    padding: 0;
+}
+
+main {
+    margin-bottom: 10vh;
+}
+
+article {
+    width: 50%;
+    margin: auto;
+}
+
+section {
+    background-color: var(--background-color);
+    width: 70%;
+    margin: auto;
+    padding: 16px;
+    border: hidden;
+    border-radius: 16px;
+    margin-bottom: 2vh;
+    filter: var(--shadow)
+}

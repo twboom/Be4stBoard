@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+}
+
+h1.header {
+    font-family: 'black';
+    margin-bottom: 2vh;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+a.header {
+    color: white;
+    text-decoration: none;
+    font-size: 6vw;
+    cursor: pointer;
+    -webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+}
+
+a.header:hover {
+    color: var(--accent-light);
+    transform: rotateZ(-5deg) scale(1.2);
+}
+
+a.header:active {
+    color: var(--accent-dark);
+}
+
+p.header {
+    font-family: 'black';
+    font-size: 2vw;
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
