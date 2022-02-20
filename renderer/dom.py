@@ -33,3 +33,14 @@ def append_child(html, parent, child):
     html = re.sub(regex, content, html)
 
     return html
+
+
+def reconstruct_element(tag, attrs):
+    """
+    Reconstructs an element from its tag and attributes.
+    """
+    element = f"<{tag}"
+    for key, value in attrs.items():
+        element += f' {key}="{value}"'
+    element += ">"
+    return element
