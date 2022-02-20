@@ -2,12 +2,12 @@
     font-family: 'black';
     src:
         local('Burbank Big Condensed Black'),
-        url('../fonts/black.otf')
+        url('assets/fonts/black.otf')
 }
 
 @font-face { /* 'Normal', medium font (text) */
     font-family: 'medium';
     src:
         local('Burbank Big Condensed Medium'),
-        url('../fonts/medium.otf')
+        url('assets/fonts/medium.otf')
 }
