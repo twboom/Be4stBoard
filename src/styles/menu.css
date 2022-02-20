@@ -24,6 +24,7 @@ div#nav {
     background-color: var(--background-color);
     border: hidden;
     border-radius: 16px;
+    transition: background-color 1s;
 }
 
 h1.nav {
