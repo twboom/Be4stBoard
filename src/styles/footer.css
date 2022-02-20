@@ -12,6 +12,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     filter: var(--shadow);
+    transition: 1s;
 }
 
 p.footer {

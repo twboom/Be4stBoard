@@ -20,5 +20,6 @@ section {
     border: hidden;
     border-radius: 16px;
     margin-bottom: 2vh;
-    filter: var(--shadow)
+    filter: var(--shadow);
+    transition: 1s;
 }
