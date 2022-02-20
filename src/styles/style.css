@@ -11,3 +11,15 @@
     /* Drop shadow */
     --shadow: drop-shadow(0 0 10px #313131);
 }
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors */
+        --background-color: #060606; /* Background of textfields, controlled by darkmode */
+        --text-color: #ffffff; /* Color of text, controlled by darkmode */
+        
+        /* Drop shadow */
+        --shadow: drop-shadow(0 0 10px #000000);
+    }
+}
