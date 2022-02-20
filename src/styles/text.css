@@ -18,10 +18,12 @@ p {
     font-size: 24px;
     margin-top: 2px;
     word-wrap: break-word;
+    transition: color 0.5s;
 }
 
 a {
     color: var(--accent-light);
+    transition: color 0.5s;
 }
 
 a:hover {
