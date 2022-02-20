@@ -76,3 +76,7 @@ if __name__ == '__main__':
     # Copy scripts
     print('[*] Copying scripts')
     copytree('src/scripts', 'build/scripts')
+
+    # Copy sounds
+    print('[*] Copying sounds')
+    copytree('data/sounds', 'build/sounds')
