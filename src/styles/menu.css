@@ -2,12 +2,19 @@ nav {
     width: 100%;
     height: 100%;
     position: absolute;
-    display: none;
     left: 0;
     top: 0;
     z-index: 10;
     background-color: #00000070;
     backdrop-filter: blur(10px);
+}
+
+nav.closed {
+    display: none;
+}
+
+nav.open {
+    display: block;
 }
 
 div#nav {
@@ -59,6 +66,7 @@ button#menu-close {
     margin-left: 10%;
     margin-top: 64px;
     margin-bottom: 1vh;
+    transition: background-color 0.5s;
 }
 
 button#menu-close:hover {
