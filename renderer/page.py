@@ -1,4 +1,5 @@
 import renderer.minifier as minify
+from renderer.utility import append_time
 
 
 # Build the page
@@ -37,5 +38,6 @@ def fill_template(template, source) -> str:
 
 # Export the page
 def export_page(page, target) -> None:
+    page = append_time(page)
     with open(f'build/{target}', 'w') as f:
         f.write(page)
