@@ -65,8 +65,6 @@ def include_css(html) -> str:
             else:
                 css_files.append(file['href'])
 
-    print(css_files)
-
     css_html = ''
     for file in css_files:
         with open(f'src/styles/{file}', 'r') as f:
