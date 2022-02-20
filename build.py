@@ -1,6 +1,6 @@
 import sys
 import os
-from shutil import rmtree
+from shutil import copytree, rmtree
 
 from renderer.page import build_page
 
@@ -59,3 +59,7 @@ if __name__ == '__main__':
     print('[*] Building pages')
     for page in pages:
         build_page(page)
+
+    # Copy assets
+    print('[*] Copying assets')
+    copytree('src/assets', 'build/assets')
