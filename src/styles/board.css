@@ -19,6 +19,51 @@ div.controller {
     font-size: 24px;
 }
 
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    outline: none;
+
+    width: 20vw;
+    height: 8px;
+    border: hidden;
+    border-radius: 16px;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+input[type=range]:hover {
+    opacity: 1;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-dark);
+    cursor: w-resize;
+    opacity: 1;
+}
+
+input[type=range]::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-dark);
+    outline: none;
+    cursor: w-resize;
+    opacity: 1;
+}
+
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-moz-range-thumb:hover {
+    background-color: var(--main-color);
+}
+
 /* Buttons */
 div.button-container {
     width: 80%;
