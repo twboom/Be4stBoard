@@ -6,12 +6,12 @@ function menu() {
             menu.classList.remove('open');
             menu.classList.add('closed');
 
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'visible';
         } else { // Opening the menu
             menu.classList.remove('closed');
             menu.classList.add('open');
 
-            document.body.style.overflow = 'visible';
+            document.body.style.overflow = 'hidden';
         }
 
     }
