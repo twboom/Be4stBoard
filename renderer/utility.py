@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 
 
 # Generate and append time stamp to the page
@@ -13,3 +14,15 @@ def append_time(page) -> str:
     content = f'Generated this file at {time} ({timezone})'
     comment = f'<!-- {content} -->'
     return page + comment
+
+
+# Load a JSON file
+def json_load(path: str) -> dict:
+    """
+    Loads a JSON file
+    :param path: The path to the JSON file
+    :return: The JSON data
+    """
+    with open(path, 'r') as f:
+        data = json.load(f)
+    return data
