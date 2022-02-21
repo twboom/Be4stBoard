@@ -1,0 +1,55 @@
+/* Form */
+
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+.form {
+    margin: 4px;
+}
+
+input.form, textarea.form {
+    border: hidden;
+    border-radius: 8px;
+    outline: none;
+    padding: 8px;
+    font-family: 'medium';
+    font-size: 24px;
+    color: white;
+    background-color: var(--accent-light);
+}
+
+textarea.form {
+    resize: vertical;
+}
+
+button[type=submit].form {
+    background-color: var(--accent-light);
+    width: 50%;
+    color: white;
+    font-family: 'medium';
+    font-size: 1.5vw;
+    padding: 16px;
+    border: hidden;
+    border-radius: 8px;
+    outline: none;
+    margin: auto;
+    margin-top: 8px;
+    transition: 0.5s;
+}
+
+button[type=submit].form:hover {
+    transform: scale(1.2);
+    background-color: var(--accent-dark);
+}
+
+button[type=submit].form:active {
+    background-color: white;
+    color: var(--accent-dark)
+}
