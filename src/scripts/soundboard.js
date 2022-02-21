@@ -5,6 +5,24 @@ function soundboard() {
         'volume': 0.5,
         'favorites': [],
     };
+
+    function updateStorage() {
+        if (window.localStorage) {
+            localStorage.setItem('favorites', JSON.stringify(session.favorites));
+        }
+    };
+
+    function loadStorage() {
+        if (window.localStorage) {
+            let favorites = localStorage.getItem('favorites');
+            if (favorites) {
+                session.favorites = JSON.parse(favorites);
+            } else {
+                session.favorites = [];
+                localStorage.setItem('favorites', JSON.stringify(session.favorites));
+            }
+        }
+    };
     
     function initButton(button) {
         const config = {
@@ -23,6 +41,11 @@ function soundboard() {
 
         // Add to favorites
         button.addEventListener('contextmenu', showContextmenu);
+
+        // Add to favorites if in localStorage
+        if (session.favorites.includes(config.src)) {
+            toggleFavorite(config, button, true)
+        }
         
     }
 
@@ -71,11 +94,15 @@ function soundboard() {
         container.style.position = 'absolute';
     }
 
-    function toggleFavorite({src, gain}, button) {
-        if (session.favorites.includes(src)) {
-            session.favorites.splice(session.favorites.indexOf(src), 1);
-        } else {
-            session.favorites.push(src);
+    function toggleFavorite({src, gain}, button, initFavorite = false) {
+        if (!initFavorite) {
+            if (session.favorites.includes(src)) {
+                session.favorites.splice(session.favorites.indexOf(src), 1);
+            } else {
+                session.favorites.push(src);
+            };
+
+            updateStorage();
         };
 
         if (button.dataset.favorite == 'true') {
@@ -101,6 +128,9 @@ function soundboard() {
     }
 
     function init() {
+        // Set session favorites
+        loadStorage();
+
         // Volume slider
         document.getElementById('volume-slider').addEventListener('input', setVolume);
         setVolume();
