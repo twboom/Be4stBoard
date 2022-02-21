@@ -113,6 +113,20 @@ function soundboard() {
         document.addEventListener('click', _ => {
             [...document.getElementsByClassName('contextmenu')].forEach(btn => { btn.remove() });
         });
+
+        // Volume control
+        document.querySelector('a.header').addEventListener('mouseover', _ => {
+            session.volumeTimout = setTimeout(_ => {
+                document.getElementById('volume-slider').setAttribute('max', 110);
+                document.getElementById('volume-slider').value = 110;
+                session.volume = 1.1;
+                document.getElementById('volume-display').innerText = 11;
+                console.log(`Well done! You've just set the volume to 11!`)
+            }, 1000)
+        });
+        document.querySelector('h1.header').addEventListener('mouseout', _ => {
+            clearTimeout(session.volumeTimout);
+        });
     }
 
     init();
