@@ -23,3 +23,11 @@
         --shadow: drop-shadow(0 0 10px #000000);
     }
 }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
