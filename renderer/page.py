@@ -2,6 +2,7 @@ import renderer.minifier as minify
 from renderer.utility import append_time
 from renderer.dom import get_elements_by_tag_name, append_child, reconstruct_element
 from renderer.board import board
+from renderer.sources import sources
 
 
 # Build the page
@@ -99,3 +100,5 @@ def include_css(html) -> str:
 def check_exception(source) -> None:
     if source == 'board.html':
         return board
+    if source == 'sources.html':
+        return sources
