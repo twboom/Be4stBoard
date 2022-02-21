@@ -1,7 +1,7 @@
+from renderer.utility import json_load
+
+
 # Render the soundboard
-from matplotlib.font_manager import json_load
-
-
 def board(html):
     # Read the sounds from the datafile
     sounds = json_load('data/sounds.json')
