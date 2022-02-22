@@ -46,7 +46,7 @@ def sources(html):
         sound_html = ''.join(sound_list)
 
         source_html = f'''
-        <section>
+        <section class="source">
             <h1>{name}</h1>
             <p>Clipped by: {clipper}</p>
             <p>Find it <a href="{link}">here</a> on {platform}!</p>
