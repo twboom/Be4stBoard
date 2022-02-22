@@ -2,14 +2,7 @@
 The original Be4stSie Soundboard!
 
 ## About
-This is a small soundboard webapp with sounds from Be4stSie!
-
-Please note: I'm not a developer, it is *not* my job. That's why my code can be very sloppy!
-
-### Rewrite
-Because I've learned so much since I last worked on this project I decided to rewrite it. You can follow the progress on the [Rewrite-branch][rewrite-branch] on the GitHub.
-
-I'll be employing different techniques because, well, how Be4stBoard currently works is honestly stupid. On the rewrite I won't use frameworks, but Python will be used on server side to build the app on deploy. Still no fancy dynamic or database stuff...
+This is a small soundboard webapp with sounds from Be4stSie! It'll always be a hobby project, and I might abandon it for some time...
 
 ## Features
 Be4stBoard now only has one feature, the soundboard! However, you can find *all* the sources on the [sources] page!
