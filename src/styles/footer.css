@@ -1,0 +1,23 @@
+footer {
+    width: 80%;
+    margin: auto;
+    background-color: var(--background-color);
+    position: fixed;
+    bottom: 16px;
+    left: 10%;
+    border: hidden;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    filter: var(--shadow);
+    transition: 1s;
+}
+
+p.footer {
+    text-align: center;
+    font-family: 'medium';
+    font-size: 24px;
+    margin: 0;
+}

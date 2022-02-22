@@ -1,0 +1,33 @@
+/* Often used values */
+:root {
+    /* Colors */
+    --main-color: #7B0504;
+    --background-color: #ffffff; /* Background of textfields, controlled by darkmode */
+    --text-color: #000000; /* Color of text, controlled by darkmode */
+    --accent-light: #4d97bf;
+    --accent-dark: #1851a7;
+    --accent-yellow: #ffd700;
+
+    /* Drop shadow */
+    --shadow: drop-shadow(0 0 10px #313131);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors */
+        --background-color: #060606; /* Background of textfields, controlled by darkmode */
+        --text-color: #ffffff; /* Color of text, controlled by darkmode */
+        
+        /* Drop shadow */
+        --shadow: drop-shadow(0 0 10px #000000);
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

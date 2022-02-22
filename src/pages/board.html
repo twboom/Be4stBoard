@@ -1,0 +1,13 @@
+<script defer src="scripts/soundboard.js"></script>
+<link rel="stylesheet" href="board.css">
+
+<div id="controls">
+    <div class="controller">
+        <label for="volume">Volume: <span id="volume-display"></span></label>
+        <input type="range" name="volume" id="volume-slider" min="0" max="100" step="1">
+    </div>
+</div>
+
+<div id="favorite-container" class="button-container"></div>
+<br>
+<div id="sound-button-container" class="button-container">{{board}}</div>
