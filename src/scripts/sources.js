@@ -6,7 +6,7 @@ function sources() {
         if (query != "") {
             query = query.toLowerCase();
             
-            const sections = [...document.getElementsByTagName('section')];
+            const sections = [...document.getElementsByClassName('source')];
 
             sections.forEach(section => {
                 const samples = [...section.getElementsByClassName('sound-preview')];
