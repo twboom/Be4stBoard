@@ -1,6 +1,7 @@
 import sys
 import os
 from shutil import copytree, rmtree, copyfile
+from renderer.api import api
 
 from renderer.page import build_page
 
@@ -84,3 +85,8 @@ if __name__ == '__main__':
     # Add _headers
     print('[*] Adding headers')
     copyfile('config/_headers', 'build/_headers')
+
+    # Build API
+    print('[*] Building API')
+    os.mkdir('build/api')
+    api()
