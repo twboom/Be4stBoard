@@ -1,6 +1,6 @@
 import sys
 import os
-from shutil import copytree, rmtree
+from shutil import copytree, rmtree, copyfile
 
 from renderer.page import build_page
 
@@ -80,3 +80,7 @@ if __name__ == '__main__':
     # Copy sounds
     print('[*] Copying sounds')
     copytree('data/sounds', 'build/sounds')
+
+    # Add _headers
+    print('[*] Adding headers')
+    copyfile('config/_headers', 'build/_headers')
