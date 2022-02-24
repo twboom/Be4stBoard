@@ -1,2 +1,5 @@
 /api/*
     Access-Control-Allow-Origin: *
+
+/sounds/*
+    Access-Control-Allow-Origin: *
