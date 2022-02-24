@@ -20,7 +20,7 @@ def sounds(html):
             extension = 'mp3'
         path = f'sounds/{slug}.{extension}'
 
-        table_row = f'<tr><td>{name}</td><td>{path}</td><td>{volume}</td><td><a href="{path}" class="sound-link">{path}</a></td></tr>'
+        table_row = f'<tr><td>{name}</td><td>{slug}</td><td>{volume}</td><td><a href="{path}" class="sound-link">{path}</a></td></tr>'
 
         sound_html_list.append(table_row)
 
