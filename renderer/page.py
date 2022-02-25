@@ -3,6 +3,7 @@ from renderer.utility import append_time
 from renderer.dom import get_elements_by_tag_name, append_child, reconstruct_element
 from renderer.board import board
 from renderer.sources import sources
+from renderer.sounds import sounds
 
 
 # Build the page
@@ -102,3 +103,5 @@ def check_exception(source) -> None:
         return board
     if source == 'sources.html':
         return sources
+    if source == 'sounds.html':
+        return sounds
