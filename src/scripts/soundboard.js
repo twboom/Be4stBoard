@@ -51,6 +51,7 @@ function soundboard() {
 
     function playSound({src, gain}) {
         gain *= session.volume;
+        if (session.volume === 1.1) { gain = 1 };
         const audio = new Audio(src);
         const ctx = new AudioContext();
         const source = ctx.createMediaElementSource(audio);
@@ -147,6 +148,7 @@ function soundboard() {
         // Volume control
         document.querySelector('a.header').addEventListener('mouseover', _ => {
             session.volumeTimout = setTimeout(_ => {
+                if (session.volume === 1.1) { return };
                 document.getElementById('volume-slider').setAttribute('max', 110);
                 document.getElementById('volume-slider').value = 110;
                 session.volume = 1.1;
