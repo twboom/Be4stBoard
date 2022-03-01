@@ -28,7 +28,7 @@ def sources(html):
 
         for sound in source_sounds:
             sound = next(x for x in sounds if x["slug"] == sound )
-            name = sound['name']
+            sound_name = sound['name']
             slug = sound['slug']
 
             if 'extension' in sound:
@@ -39,7 +39,7 @@ def sources(html):
             path = f'sounds/{slug}.{extension}'
             src_attr = f'data-src="{path}"'
 
-            sound_html = f'<li class="sound-preview" {src_attr}>{name}</li>'
+            sound_html = f'<li class="sound-preview" {src_attr}>{sound_name}</li>'
 
             sound_list.append(sound_html)
 
